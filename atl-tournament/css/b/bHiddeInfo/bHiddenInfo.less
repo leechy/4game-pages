@@ -1,0 +1,83 @@
+.pAtlTour {
+	&_bHiddenInfo {
+		margin: 0 0 55px;
+		&__eLinkContainer {
+			text-align: center;
+			margin: 0 0 30px;
+		}
+		&__eLinkCloseContainer {
+			text-align: center;
+			padding: 0 0 40px;
+		}
+		&__eLink {
+			margin: 0 20px;
+		}
+		&__eContainer {
+			background: url('../img/hiddenInfoPattern.png');
+			overflow: hidden;
+			max-height: 0;
+			transition: max-height 600ms linear, overflow 0ms linear 600ms;
+			&__mType_opened {
+				max-height: 2000px;
+				overflow: visible;
+			}
+		}
+		&__eTitle {
+			color: #464646;
+			font: 700 25px/30px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+			text-align: center;
+			margin: 0 0 19px;
+			padding: 32px 0 0;
+		}
+        &__eColumnContainer {
+			padding: 0 0 0 30px;
+			margin: 0 auto 7px;
+			width: 780px;
+            &:after {
+                content: " ";
+                display: table;
+                clear: both;
+            }
+        }
+		&__eColumn {
+			float: left;
+			width: 50%;
+		}
+		&__eSection {
+			color: #636363;
+			font-size: 13px;
+			line-height: 18px;
+			margin: 0 0 35px;
+			padding: 0 45px 0 7px;
+		}
+		&__eSectionContent {
+			margin: 0 0 5px;
+		}
+		&__eSectionTitle {
+			font: 700 15px/20px 'PT Sans','Trebuchet MS', Arial, sans-serif;
+			margin: 0 0 6px;
+			color: #000;
+		}
+		&__eSectionSubTitle {
+			font-weight: 700;
+			color: #363636;
+			margin: 0 0 5px;
+		}
+		&__eUList {
+			margin: 0 0 17px;
+		}
+		&__eUListItem {
+			&:before {
+				content: '— ';
+			}
+			margin: 0 0 5px;
+		}
+		&__eOList {
+			margin: 0 0 17px;
+		}
+		&__eOListItem {
+			list-style: decimal outside;
+			margin: 0 0 5px;
+		}
+	}
+}

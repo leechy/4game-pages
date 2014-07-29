@@ -1,0 +1,69 @@
+.pAtlTour {
+	&_bHint {
+		font: 13px/18px	Arial, sans-serif;
+		color: #555;
+		position: absolute;
+		left: 50%;
+		width: 500px;
+		margin: 0 0 0 -250px;
+		text-align: left;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 10;
+		transition: opacity 600ms ease-in-out 0ms, visibility 0ms linear 600ms;
+		&:before {
+			content: ' ';
+			position: absolute;
+			left: 50%;
+			bottom: 100%;
+			margin: 0 0 0 -5px;
+			height: 5px;
+			width: 11px;
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAFCAYAAACTphZWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTI4NkExQTIxNjk2MTFFNEJFNzU4NTEyRDg0REI3RDEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTI4NkExQTMxNjk2MTFFNEJFNzU4NTEyRDg0REI3RDEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Mjg2QTFBMDE2OTYxMUU0QkU3NTg1MTJEODREQjdEMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Mjg2QTFBMTE2OTYxMUU0QkU3NTg1MTJEODREQjdEMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsexIQcAAAB+SURBVHjaYszLzWNiQADGltYWBR4envlfvnxJrKmueQAU+w+TBClkhNLMtXW1ikCFexkZGW1BNIgPEoepY4IpLCouUhQWFt4NVCgPtgJIg/ggcbgGoDO4bty4ofnv37/7/7EAoPgDkDxIHcOF8xe0//79++A/HgCSB6kDCDAAm0NhJKWw460AAAAASUVORK5CYII=);
+		}
+		&__eContent {
+			border-radius: 3px;
+			width: 360px;
+			padding: 26px 30px;
+			margin: 0 auto;
+			background: #fff;
+			box-shadow: 0 5px 8px rgba(110, 109, 110, 0.5);
+			&__mType_narrow {
+				width: 240px;
+			}
+		}
+		&__eParagraph {
+			margin: 0 0 5px;
+		}
+		&__eListContainer {
+			&:after {
+				content: " ";
+				display: table;
+				clear: both;
+			}
+		}
+		&__eList {
+			&__mType_double {
+				width: 45%;
+				padding: 0 5% 0 0;
+				float: left;
+			}
+			&__mType_left {
+				padding: 0 5% 0 0;
+			}
+			&__mType_right {
+				padding: 0 0 0 5%;
+			}
+		}
+		&__eListItem {
+			padding: 7px 0 0 18px;
+			position: relative;
+			&:before {
+				position: absolute;
+				left: 0;
+				content: '— '
+			}
+		}
+
+	}
+}
