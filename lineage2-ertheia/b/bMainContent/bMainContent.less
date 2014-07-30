@@ -1,0 +1,66 @@
+.pL2Ertheia {
+	&_bMainContent {
+		position: relative;
+		left: -7px;
+		width: 1200px;
+		height: 924px;
+		margin: 0 auto;
+		font-family: 'Philosopher', sans-serif;
+		background: url('bMainContent/bgShinePlanet.jpg') no-repeat 50% -287px #311214;
+		background-size: 1241px 987px;
+		-webkit-transition: background-size 0.6s linear, background-position 0.6s linear ;
+		transition: background-size 0.6s linear, background-position 0.6s linear ;
+	
+		&_mHoverEffect {
+			background-size: 1341px 1087px;
+			background-position: 50% -387px;
+			-webkit-transition: background-size 1s linear, background-position 1s linear ;
+			transition: background-size 1s linear, background-position 1s linear ;
+		}
+
+		&__eTopText {
+			position: relative;
+			z-index: 100;
+			width: 500px;
+			margin: 0 auto;
+			padding-top: 40px;
+			color:white;
+			text-align: center;
+
+			h1 {
+				font-size: 40px;
+				margin: 0; padding: 0;
+				margin-bottom: 14px;
+			}
+			p {
+				font-size: 15px;
+				line-height: 20px;
+				width: 480px;
+				margin: 0 auto;
+			}
+		}
+		&__eRightText {
+			position: absolute;
+			z-index: 100;
+			top: 192px;
+			right: 24px;
+			width: 196px;
+			line-height: 15px;
+			color: #b2c3d1;
+			font-size: 13px;
+
+			img {
+				margin: 0 0 12px -7px;
+			}
+		}
+		&_eDownloadButton {
+			position: absolute;
+			top: 45px;
+			right: 68px;
+			width: 773px;
+			height: 311px;
+			background: url('bMainContent/bText.png') no-repeat right top transparent;
+		}
+
+	}
+}

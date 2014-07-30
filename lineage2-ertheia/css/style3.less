@@ -1,0 +1,827 @@
+/* ------------------ [ reset ]
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/*------------------ [ Fonts ]
+*/
+@import url(http://fonts.googleapis.com/css?family=Philosopher:400,700&subset=cyrillic,latin);
+
+
+/*------------------ [ Setup ]
+*/
+
+p{ font-family: Arial, sans-serif; }
+h2{ font-weight: 700; }
+.overflow-hidden{ overflow: hidden; }
+
+html, body{
+  width: 100%;
+  font-family: 'Philosopher', sans-serif;
+}
+
+#wrap{
+  width:100%;
+  background: url(../img/main-background.jpg) no-repeat top center #311214;
+  padding-top: 295px;
+  overflow: hidden;
+}
+
+#main-content{
+  position: relative;
+  margin: 0 auto;
+  left: -7px;
+  background: url(../img/bgShinePlanet.jpg) no-repeat 50% -287px transparent;
+  width: 1200px; height: 924px;
+  background-size: 1241px 987px;
+  -webkit-transition: background-size 0.6s linear, background-position 0.6s linear ;
+}
+
+
+
+/*------------------ [ Content ]
+*/
+
+.bTopText{
+  color:white;
+  text-align: center;
+  padding-top: 40px;
+  position: relative;
+  z-index: 101;
+  width: 500px;
+  margin: 0 auto;
+  h2{
+    font-size: 40px;
+    margin-bottom: 14px;
+  }
+  p{
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.bRightText{
+  position: absolute;
+  width: 220px;
+  top: 192px; right: 48px;
+  line-height: 15px;
+  color: #b2c3d1;
+  font-size: 13px;
+  z-index: 101;
+  img{
+    margin: 0 0 12px -7px;
+  }
+}
+
+.bDownloadButton{
+  position: absolute;
+  top: 45px; right: 68px;
+  background: url(../img/bText.png) no-repeat right top transparent;
+  width: 773px; height: 311px;
+}
+
+
+.ePersonage1{
+  width:1090px; height: 900px;
+  background: url(../img/ePersonage1.png) no-repeat center top transparent;
+  position: absolute;
+  top: 86px; left: 12px;
+  -webkit-transition: opacity 0.3s 0.1s;
+  .head-personage{
+    background: url(../img/ePersonage1.png) no-repeat -459px -90px transparent;
+    position: absolute;
+    top: 90px; left: 459px;
+    width: 234px; height: 244px;
+    z-index: 102;
+  }
+  .head-hair{
+    background: url(../img/hair.png);
+    width: 36px; height: 59px;
+    position: absolute;
+    top: 236px; left: 639px;
+    z-index: 103;
+  }
+  .eEars{
+    position: absolute;
+    background: url(../img/eEarsPers1.png) no-repeat transparent;
+    z-index: 102;
+    &.eEarLeft{
+      top: 172px; left: 439px;
+      width: 94px; height: 85px;
+    }
+    &.eEarRight{
+      top: 238px; left: 649px;
+      width: 70px; height: 62px;
+      background-position: -209px -65px;
+    }
+  }
+}
+.ePersonage2{
+  width:737px; height: 900px;
+  background: url(../img/ePersonage2.png) no-repeat center top transparent;
+  position: absolute;
+  top: 179px; left: 267px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  .head-personage{
+    background: url(../img/ePersonage2.png) no-repeat  -129px 10px transparent;
+    position: absolute;
+    top: -10px; left: 129px;
+    width: 355px; height: 299px;
+    z-index: 102;
+    pointer-events: all;
+  }
+}
+
+.bPlanets{
+  width: 680px; height: 680px;
+  position: absolute;
+  top: 150px; left: 230px;
+  perspective: 2200px;
+  display: none;
+  z-index: 101;
+
+  .ePlanet{
+    position: absolute;
+    z-index: 201;
+    top: 50%; left: 50%;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    color:#fff;
+    i{
+      display: block;
+      background: no-repeat transparent;
+      width:156px; height: 156px;
+      background-size: 156px 156px;
+      margin: 0 0 6px 0;
+      position: relative;
+    }
+    &.eAlchemy i{ background-image: url(../img/ePlanets3.png); }
+    &.eVideo i{ background-image: url(../img/ePlanets1.png); }
+    &.eClasses i{ background-image: url(../img/ePlanets2.png); }
+    &.eLocation i{ background-image: url(../img/ePlanets4.png); }
+    &:hover{
+      color:#01c4e7;
+      text-shadow: 0 1px 4px #000000;
+    }
+  }
+  &.opened{
+    z-index: 902;
+    -webkit-transform: translate(0, 510px);
+    -webkit-transition: -webkit-transform 1s linear;
+
+    .ePlanet{
+      -webkit-filter: grayscale(50%);
+      -webkit-animation-name: none;
+      -webkit-animation-play-state: paused !important;
+      -webkit-transition: font-size 1s linear, -webkit-transform 1s linear;
+
+      &.eAlchemy,  &.eVideo, &.eClasses, &.eLocation  {
+        font-size:15px;
+        border-radius: 86px;
+        i{
+          width: 86px; height: 86px;
+          background-size: 86px 86px;
+          -webkit-transition: width 1s linear, height 1s linear, background-size 1s linear;
+        }
+      }
+
+      &.eClasses{
+        -webkit-transform: translate( -189px, -340px ) !important;
+        &:hover:not(.active) i:before{
+          content: '';
+          position: absolute;
+          bottom: 13px; left: 1px;
+          background: url(../img/ePlanets2__hover.png) no-repeat bottom left transparent;
+          width: 96px; height: 57px;
+          -webkit-animation: eClasses__Hover 2s;
+          -webkit-animation-iteration-count: infinite;
+        }
+      }
+      &.eAlchemy{
+        -webkit-transform: translate( -63px, -340px ) !important;
+        &:hover:not(.active) i:before{
+          content: '';
+          position: absolute;
+          top: 4px; left: 42px;
+          background: url(../img/ePlanets3__hover.png) no-repeat top left transparent;
+          width: 24px; height: 24px;
+          -webkit-animation: eAlchemy__Hover1 1.2s linear;
+          -webkit-animation-iteration-count: infinite;
+        }
+        &:hover:not(.active) i:after{
+          content: '';
+          position: absolute;
+          top: 26px; left: 57px;
+          background: url(../img/ePlanets3__hover.png) no-repeat bottom right transparent;
+          width: 24px; height: 24px;
+          -webkit-animation: eAlchemy__Hover2 1.4s linear;
+          -webkit-animation-iteration-count: infinite;
+        }
+      }
+      &.eVideo{
+        -webkit-transform: translate( 64px, -340px ) !important;
+        &:hover:not(.active) i{
+          background-image: url(../img/ePlanets1__hover.png);
+        }
+      }
+      &.eLocation{
+        -webkit-transform: translate( 189px, -340px ) !important;
+        &:hover:not(.active) i:before{
+          content: '';
+          position: absolute;
+          bottom: -1px; left: 17px;
+          background: url(../img/ePlanets4__hover.png) no-repeat bottom left transparent;
+          width: 62px; height: 20px;
+          -webkit-animation: eLocation__Hover 1.2s;
+          -webkit-animation-iteration-count: infinite;
+        }
+      }
+
+      &.active{
+        -webkit-filter: grayscale(100%);
+        cursor: default;
+        span{
+          color:#fff
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          top:-23px; left:-23px;
+          z-index: -1;
+          background: url(../img/planet-active.png) no-repeat transparent;
+          width: 135px; height: 135px;
+          opacity: 0;
+          display: block;
+        }
+      }
+      &:hover:not(.active){
+        -webkit-filter: grayscale(0%);
+      }
+    }
+    &.bg-active-show{
+      .ePlanet.active{
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &.start{
+    .ePlanet{
+      border-radius: 50px;
+      -webkit-transform-origin: center;
+      -webkit-animation: orbit 20s linear infinite;
+      pointer-events: all;
+    }
+    .bPlanets:hover .ePlanet {
+      animation-play-state: paused;
+    }
+    .eAlchemy{
+    }
+    .eVideo{
+      -webkit-animation-delay: -5s !important;
+    }
+    .eClasses{
+      -webkit-animation-delay: -10s !important;
+    }
+    .eLocation{
+      -webkit-animation-delay: -15s !important;
+    }
+  }
+  &.pause{
+    .eAlchemy, .eVideo, .eClasses, .eLocation{
+      -webkit-animation-play-state: paused !important;
+      animation-play-state: paused !important;
+    }
+  }
+}
+
+// Alchemy Hover
+.bAlchemy__Hover{
+  background: url(../img/eAlchemy__hover.png) no-repeat transparent;
+  width: 1475px; height: 1106px;
+  position: absolute;
+  top: -171px; left: -158px;
+  z-index: 100;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s linear;
+
+  &.start{
+    opacity: 1;
+    -webkit-transition: opacity 0.6s linear;
+    .eFeathers{
+      opacity: 1;
+      -webkit-transition: opacity 1s linear 0.6s;
+    }
+  }
+
+  .eFeathers{
+    position: absolute;
+    background: url(../img/eFeathers.png) no-repeat transparent;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+
+    &.eFeather1{
+      width: 72px; height: 58px;
+      left: 392px; top: 484px;
+      background-position: -18px -51px;
+      -webkit-animation: eFeathers1__Move 3s linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-transform-origin: center;
+    }
+    &.eFeather2{
+      width: 85px; height: 108px;
+      left: 570px; top: 682px;
+      background-position: -216px -19px;
+      -webkit-animation: eFeathers2__Move 1.8s linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-transform-origin: center;
+    }
+    &.eFeather3{
+      width: 57px; height: 55px;
+      left: 861px; top: 383px;
+      background-position: -423px 0px;
+      -webkit-animation: eFeathers3__Move 2s linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-transform-origin: center;
+    }
+    &.eFeather4{
+      width: 91px; height: 53px;
+      left: 945px; top: 972px;
+      background-position: -9px -252px;
+      -webkit-animation: eFeathers4__Move 2s linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-transform-origin: center;
+    }
+    &.eFeather5{
+      width: 82px; height: 57px;
+      left: 1041px; top: 591px;
+      background-position: -213px -251px;
+      -webkit-animation: eFeathers5__Move 2.4s linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-transform-origin: center;
+    }
+    &.eFeather6{
+      width: 102px; height: 77px;
+      left: 504px; top: 446px;
+      background-position: -2px -440px;
+      -webkit-animation: eFeathers6__Move 2s linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-transform-origin: center;
+    }
+    &.eFeather7{
+      width: 150px; height: 52px;
+      left: 1025px; top: 693px;
+      background-position: -369px -458px;
+      -webkit-animation: eFeathers7__Move 2.5s linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-transform-origin: center;
+    }
+    &.eFeather8{
+      width: 77px; height: 43px;
+      left: 881px; top: 473px;
+      background-position: -428px -124px;
+      -webkit-animation: eFeathers8__Move 2.6s linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-transform-origin: center;
+    }
+  }
+}
+
+
+// Modal Window
+
+.bGlow__eRayCrop{
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  display: none;
+  img{
+    position: absolute;
+    top: -75%; left: -50%;
+    width: 200%; height: 220%;
+    background: 0 0;
+    border: 0;
+    outline: none;
+    pointer-events: none;
+  }
+}
+
+
+.bOverlay{
+  position: fixed;
+  top:0; left:0;
+  width:100%; height: 100%;
+  background: rgba(0, 0, 0, 0.80);
+  z-index: 900;
+  display: none;
+}
+  .bModalDialog__Container{
+    position: absolute;
+    top:45%; left:50%;
+    width:736px; height: 600px;
+    z-index: 900;
+    display: none;
+
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .bModalDialog{
+    position: relative;
+    border:22px solid #001d29;
+    width:736px;
+    margin: 0 0 -20px -21px;
+
+    border-radius: 7px;
+    -webkit-box-shadow: 0 0 150px 0 rgba(255, 255, 255, 0.45);
+
+
+    .bContentField{
+      color:#fff;
+      width:100%; min-height: 360px;
+      background: #012a40;
+      position: relative;
+      z-index: 999;
+      background: -moz-linear-gradient(top, #012a40 0%, #014a68 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#012a40), color-stop(100%,#014a68));
+      background: -webkit-linear-gradient(top, #012a40 0%,#014a68 100%);
+      background: -o-linear-gradient(top, #012a40 0%,#014a68 100%);
+      background: -ms-linear-gradient(top, #012a40 0%,#014a68 100%);
+      background: linear-gradient(to bottom, #012a40 0%,#014a68 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#012a40', endColorstr='#014a68',GradientType=0 );
+
+      > div{
+        display: none;
+        .bTitle{
+          font-weight: 700;
+          font-size:30px;
+          color:#fff;
+          text-align: center;
+          padding: 46px 0 40px 0;
+        }
+      }
+      .eAlchemy{
+        p{
+          font-family: 'Arial', sans-serif;
+          float:left;
+          font-size: 15px;
+          margin: 0 0 0 75px;
+          line-height: 20px;
+          width: 296px;
+          color:#b2c3d1;
+        }
+        .bMakePotion{
+          float:left;
+          color:#b2c3d1;
+          font-size: 13px;
+          margin: 36px 0 0 86px;
+          position: relative;
+
+          .icon{
+            background: url(../img/bMakePotion.png) no-repeat transparent;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            span{
+              font-family: Arial, sans-serif;
+              display: block;
+              width: 95px;
+              left: -15px;
+              position: absolute;
+              bottom:-34px;
+              line-height: 14px;
+              text-align: center;
+            }
+          }
+          .eHealthPotion{
+            left:0; opacity: 1;
+            width:64px; height: 64px;
+            margin: 0 17px 0 0;
+            -webkit-transition: opacity 0.2s linear 0.2s, left 0.6s linear 0.2s;
+          }
+          .ePlus{
+            opacity: 1;
+            width:38px; height: 38px;
+            background-position: -84px -84px;
+            margin: 13px 16px 0 0;
+            -webkit-transition: opacity 0.2s linear 0.6s;
+          }
+          .eWindStone{
+            right: 0; opacity: 1;
+            width:64px; height:64px;
+            background-position: 0px -84px;
+            -webkit-transition: opacity 0.2s linear 0.2s, right 0.6s linear 0.2s;
+          }
+          .eReadyPotion{
+            opacity: 0;
+            position: absolute;
+            background-position: -84px 0;
+            width: 65px; height: 65px;
+            top: 0; left: 71px;
+            -webkit-transition: opacity 0.2s linear;
+          }
+          .eMouseOver{
+            position: absolute;
+            top: -32px;
+            font-family: Arial, sans-serif;
+            left: 29px;
+            font-style:italic;
+            &:before{
+              content: '';
+              display: inline-block;
+              background: url(../img/bMakePotion.png) no-repeat transparent -143px -83px;
+              width:25px; height: 20px;
+              position: absolute;
+              right: -35px; top: 6px;
+            }
+          }
+          &:hover{
+            .eHealthPotion{
+              left: 71px; opacity: 0;
+              -webkit-transition: left 0.6s linear, opacity 0.2s 0.7s linear;
+            }
+            .eWindStone{
+              right: 70px; opacity: 0;
+              -webkit-transition: right 0.6s linear, opacity 0.2s 0.7s linear;
+            }
+            .ePlus{
+              opacity: 0;
+              -webkit-transition: opacity 0.2s linear;
+            }
+            .eReadyPotion{
+              opacity: 1;
+              -webkit-transition: opacity 0.2s 0.7s linear;
+            }
+          }
+        }
+      }
+      .eClasses{
+        height: 412px;
+        .eBg{
+          background: url(../img/eClasses.png) no-repeat transparent;
+          width: 867px; height: 304px;
+          position: absolute;
+          bottom: -2px; left: -92px;
+        }
+        .bSides{
+          width:194px;
+          float: left;
+          margin-top: 4px;
+          .eSubTitle{
+            font-size:20px;
+            margin-bottom: 13px;
+            position: relative;
+          }
+          p{
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color:#b2c3d1;
+            line-height: 18px;
+            margin-bottom: 12px;
+          }
+          i{
+            display: inline-block;
+            width:35px; height: 34px;
+            position: absolute;
+            background: url(../img/iClasses.png) no-repeat transparent;
+            left: 1px; top: -7px;
+          }
+          &.bLeftSide{
+            margin-left: 237px;
+            .eSubTitle{
+              padding-left: 49px;
+            }
+          }
+          &.bRightSide{
+            margin-left: 77px;
+            .eSubTitle{
+              padding-left: 42px;
+            }
+            i{
+              background-position: -50px 0;
+              left: -4px;
+            }
+          }
+        }
+      }
+      .eLocation{
+        background: #001d29;
+        height: 480px;
+        .bBigContainerPick{
+          width: 100%; height: 414px;
+          overflow: hidden;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .eVideo{
+        background: #001d29;
+        height: 480px;
+        .bBigContainerVideo{
+          width: 100%; height: 414px;
+          overflow: hidden;
+          iframe{
+            width: 100%; height: 100%;
+          }
+        }
+      }
+      .bTabField{
+        text-align: center;
+        padding-top: 9px;
+        img{
+          cursor: pointer;
+          margin-left: 6px;
+          width:110px; height: 60px;
+          &:first-child{
+            margin-left: 0;
+          }
+          &.active{
+            -webkit-filter: grayscale(100%);
+          }
+        }
+      }
+    }
+  }
+  .eCloseModalDialog{
+    position: absolute;
+    top: -36px; right: -37px;
+    background: url(../img/close.png);
+    width:30px; height: 30px;
+    cursor: pointer;
+    &:hover{
+      background-position: top right;
+    }
+  }
+
+/*------------------ [ Animation ]
+*/
+
+// planets
+@-webkit-keyframes eClasses__Hover{
+  0%  { height: 0; }
+  17% { height: 0 }
+  20% { height: 57px; }
+  25% { height: 0px; }
+  40% { height: 0 }
+  43% { height: 57px; }
+  50% { height: 0px; }
+  100%{ height: 0; }
+}
+@-webkit-keyframes eAlchemy__Hover1{
+  0%  { margin: -2px 0 0 2px;  }
+  12.5% { margin: -2px 0 0 0; }
+  25% { margin: -2px 0 0 -2px; }
+  37.5% { margin: 0 0 0 -2px; }
+  50% { margin: 2px 0 0 -2px; }
+  62.5% { margin: 2px 0 0 0px; }
+  75% { margin: 2px 0 0 2px; }
+  87.5% { margin: 0 0 0 2px; }
+  100%{ margin: -2px 0 0 2px;  }
+}
+@-webkit-keyframes eAlchemy__Hover2{
+  0%  { margin: -2px 0 0 2px;  }
+  12.5% { margin: -2px 0 0 0; }
+  25% { margin: -2px 0 0 -2px; }
+  37.5% { margin: 0 0 0 -2px; }
+  50% { margin: 2px 0 0 -2px; }
+  62.5% { margin: 2px 0 0 0px; }
+  75% { margin: 2px 0 0 2px; }
+  87.5% { margin: 0 0 0 2px; }
+  100%{ margin: -2px 0 0 2px; }
+}
+@-webkit-keyframes eLocation__Hover{
+  0%  { bottom: -1px; left: 15px;  }
+  20% { bottom: -2px; left: 17px;  }
+  40% { bottom: -1px; left: 19px;  }
+  100%{ bottom: -1px; left: 15px;  }
+}
+
+
+
+
+// hover Effects
+#main-content.ehoverEffect{
+  background-size: 1341px 1087px;
+  background-position: 50% -387px;
+  -webkit-transition: background-size 1s linear, background-position 1s linear ;
+}
+
+.bPersonages.ehoverEffect{
+  .ePersonage1{
+    opacity: 0;
+    -webkit-transition: opacity 0.5s linear;
+    transition: opacity 0.5s linear;
+    pointer-events: none;
+  }
+  .ePersonage2{
+    opacity: 1;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+    pointer-events: none;
+  }
+}
+
+.ePersonage1.ehoverEffect{
+  .eEarLeft{
+    -webkit-animation: eEarLeft__Hover 1.2s;
+    -webkit-animation-iteration-count: infinite;
+    transform-origin: right center;
+    -webkit-transform-origin: right center;
+  }
+  .eEarRight{
+    -webkit-animation: eEarRight__Hover 1.2s;
+    -webkit-animation-iteration-count: infinite;
+    transform-origin: left top;
+    -webkit-transform-origin: left center;
+  }
+}
+@-webkit-keyframes eEarLeft__Hover{
+  0%  { -webkit-transform: rotateZ(0deg) translate(0, 0); }
+  50% { -webkit-transform: rotateZ(8deg) translate(2px, 3px); }
+  100%{ -webkit-transform: rotateZ(0deg) translate(0, 0); }
+}
+@-webkit-keyframes eEarRight__Hover{
+  0%  { -webkit-transform: rotateZ(0deg) translate(0, 0); }
+  50% { -webkit-transform: rotateZ(-10deg) translate(0px, 0px); }
+  100%{ -webkit-transform: rotateZ(0deg) translate(0, 0); }
+}
+
+
+
+// Feather Move
+
+@-webkit-keyframes eFeathers1__Move{
+  0%  { margin: 0;  }
+  25% { margin: 0 0 10px 10px;  }
+  50% { margin: 0 0 0 20px; -webkit-transform: rotateZ(30deg) rotateX(-30deg); }
+  75% { margin: 10px 0 0 5px; }
+  100%{ margin: 0; }
+}
+@-webkit-keyframes eFeathers2__Move{
+  0%  { -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+  40% { -webkit-transform: rotateZ(10deg) rotateY(10deg) rotateX(0deg); margin: -5px 0 0 5px; }
+  75% { -webkit-transform: rotateZ(20deg) rotateY(5deg) rotateX(0deg); margin: -8px 0 0 -6px; }
+  100%{ -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+}
+@-webkit-keyframes eFeathers3__Move{
+  0%  { -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+  40% { -webkit-transform: rotateZ(-4deg) rotateY(10deg) rotateX(0deg); margin: -5px 0 0 4px; }
+  75% { -webkit-transform: rotateZ(-2deg) rotateY(5deg) rotateX(0deg); margin: -8px 0 0 -3px; }
+  100%{ -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+}
+@-webkit-keyframes eFeathers4__Move{
+  0%  { -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+  40% { -webkit-transform: rotateZ(-4deg) rotateY(10deg) rotateX(0deg); margin: -5px 0 0 4px; }
+  75% { -webkit-transform: rotateZ(-2deg) rotateY(5deg) rotateX(0deg); margin: -8px 0 0 -3px; }
+  100%{ -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+}
+@-webkit-keyframes eFeathers5__Move{
+  0%  { -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+  40% { -webkit-transform: rotateZ(-4deg) rotateY(10deg) rotateX(0deg); margin: -5px 0 0 4px; }
+  75% { -webkit-transform: rotateZ(-2deg) rotateY(5deg) rotateX(0deg); margin: -8px 0 0 -3px; }
+  100%{ -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+}
+@-webkit-keyframes eFeathers6__Move{
+  0%  { -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+  25% { -webkit-transform: rotateZ(10deg) rotateX(30deg); margin: 0 0 5px 5px; }
+  50% { -webkit-transform: rotateZ(20deg) rotateX(-30deg); margin: 0 0 10px 10px; }
+  75% { -webkit-transform: rotateZ(10deg) rotateX(30deg) ; margin: 0 0 5px 5px; }
+  100%{ -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0 0 0 0; }
+}
+@-webkit-keyframes eFeathers7__Move{
+  0%  { -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+  40% { -webkit-transform: rotateZ(-14deg) rotateY(10deg) rotateX(0deg); margin: -5px 0 0 4px; }
+  75% { -webkit-transform: rotateZ(-2deg) rotateY(5deg) rotateX(0deg); margin: -8px 0 0 -3px; }
+  100%{ -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+}
+@-webkit-keyframes eFeathers8__Move{
+  0%  { -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+  40% { -webkit-transform: rotateZ(-4deg) rotateY(10deg) rotateX(0deg); margin: -5px 0 0 4px; }
+  75% { -webkit-transform: rotateZ(-2deg) rotateY(5deg) rotateX(0deg); margin: -8px 0 0 -3px; }
+  100%{ -webkit-transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); margin: 0;  }
+}
+
+
+
+@-webkit-keyframes orbit {
+  0%  { -webkit-transform: translate(-50%, -50%) rotateX(55deg) rotateY(-20deg)  rotateZ(0deg)    translate(0, 340px) rotateZ(0deg)   rotateY(20deg) rotateX(-55deg); }
+  100%{ -webkit-transform: translate(-50%, -50%) rotateX(55deg) rotateY(-20deg)  rotateZ(-360deg) translate(0, 340px) rotateZ(360deg) rotateY(20deg) rotateX(-55deg); }
+}
