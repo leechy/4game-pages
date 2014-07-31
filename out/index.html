@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link href="b/l2-ertheia.css" rel="stylesheet" type="text/css">
+
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/preload.js"></script>
+        <script src="js/common.js"></script>
+    </head>
+    <body class="pL2Ertheia">
+        <div class="bSetUnneededItems" style="position: absolute; top: -999px;">
+            <img src="b/bPlanets/alchemy-hover.gif">
+            <img src="b/bPlanets/classes2-hover.gif">
+            <img src="b/bPlanets/locations-hover.gif">
+            <img src="b/bPlanets/video-hover.png">
+        </div>
+
+        <div id="bMainContent" class="pL2Ertheia_bMainContent">
+            <nav class="pL2Ertheia_bPlanets">
+                <a class="pL2Ertheia_bPlanets__ePlanet pL2Ertheia_bPlanets__ePlanet_mClasses">
+                    Классы
+                </a>
+                <a class="pL2Ertheia_bPlanets__ePlanet pL2Ertheia_bPlanets__ePlanet_mAlchemy">
+                    Алхимия
+                </a>
+                <a class="pL2Ertheia_bPlanets__ePlanet pL2Ertheia_bPlanets__ePlanet_mVideo">
+                    Видео
+                </a>
+                <a class="pL2Ertheia_bPlanets__ePlanet pL2Ertheia_bPlanets__ePlanet_mLocation">
+                    Локации
+                </a>
+            </nav>
+
+            <div class="pL2Ertheia_bMainContent__eTopText">
+                <h1>
+                    Новая раса Артея
+                </h1>
+                <p>
+                    Впервые в истории Lineage 2 — в бой вступают дети бога ветра.
+                    Новая раса воинственных девушек наделена сокрушительной силой
+                    ветра и умением создавать предметы.
+                </p>
+            </div>
+            <div class="pL2Ertheia_bMainContent__eRightText">
+                <img src="b/bMainContent/ertheiaLogo.png" alt="Ertheia">
+                <p>
+                    С новой расой пришли
+                    и другие важные перемены.
+                    Эффективность умений классов
+                    стала выше, а возможности
+                    использования предметов &mdash;
+                    шире.
+                </p>
+            </div>
+            <div class="pL2Ertheia_bMainContent__eDownloadButton"></div>
+
+            <div class="pL2Ertheia_bPersonages">
+                <div class="pL2Ertheia_bPersonage1">
+                    <div class="pL2Ertheia_bPersonage1__eHeadPersonage"></div>
+                    <div class="pL2Ertheia_bPersonage1__eEars pL2Ertheia_bPersonage1__eEars_mEarLeft"></div>
+                    <div class="pL2Ertheia_bPersonage1__eEars pL2Ertheia_bPersonage1__eEars_mEarRight"></div>
+                    <div class="pL2Ertheia_bPersonage1__eHeadHair"></div>
+                </div>
+                <div class="pL2Ertheia_bPersonage2">
+                    <div class="pL2Ertheia_bPersonage2__eHeadPersonage">
+                    </div>
+                </div>
+            </div>
+
+            <div class="pL2Ertheia_bAlchemyAction">
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_1"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_2"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_3"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_4"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_5"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_6"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_7"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_8"></div>
+            </div>
+
+            <div class="pL2Ertheia_bOverlay"></div>
+            <div class="pL2Ertheia_bModalDialog__eContainer">
+                <div class="pL2Ertheia_bModalDialog">
+                    <div class="pL2Ertheia_bModalDialog__eContent">
+                        <div class="pL2Ertheia_bClassesPopup">
+                            <h3 class="pL2Ertheia_bModalDialog__eTitle">
+                                Выбери новый класс
+                            </h3>
+                            <div class="pL2Ertheia_bClassesPopup__eBackground">
+                                <div class="pL2Ertheia_bClassesPopup__eSides pL2Ertheia_bClassesPopup__eSides_mSide_left">
+                                    <h4>
+                                        Воин Артея
+                                    </h4>
+                                    <p>
+                                        Обладает разрушительной силой гравитационного натиска.
+                                        Быстро атакует цель, с разных сторон окружая потоками воздуха.
+                                        С помощью силы гравитации создает вокруг себя безопасную зону. 
+                                    </p>
+                                    <p>
+                                        Перехватывает инициативу и позволяет союзникам безопасно выйти из сражения.
+                                    </p>
+                                </div>
+                                <div class="pL2Ertheia_bClassesPopup__eSides pL2Ertheia_bClassesPopup__eSides_mSide_right">
+                                    <h4>
+                                        Маг Артея
+                                    </h4>
+                                    <p>
+                                        Атрея использует в атаке магию ближнего боя. Наносит урон цели
+                                        и всем врагам, стоящим рядом. Порывом ветра защищает соратникови обессиливает противника. 
+                                    </p>
+                                    <p>
+                                        Предпочитает две тактики: стремительно поражает врага силой
+                                        ветра или выжидаетмомент и нападаетс неожиданной стороны.                                                
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pL2Ertheia_bAlchemyPopup">
+                            <h3 class="pL2Ertheia_bModalDialog__eTitle">
+                                Постигни тайное знание
+                            </h3>
+                            <div class="pL2Ertheia_bAlchemyPopup__eDescription">
+                                <p>
+                                    Благодаря природной изобретательности
+                                    и способности правильно расходовать
+                                    ману, артеи освоили Алхимию — особое
+                                    умение, которого нет у других классов.
+                                </p>
+                                <p>
+                                    Используя силу ветра, они превращают одни
+                                    предметы в другие и при желании продают
+                                    их за адены.
+                                </p>
+                            </div>
+                            <div class="pL2Ertheia_bMakePotionAlchemy">
+                                <div class="pL2Ertheia_bMakePotionAlchemy__eIcon pL2Ertheia_bMakePotionAlchemy__eHealthPotion">
+                                    <span>Зелье<br>Исцеления</span>
+                                </div>
+                                <div class="pL2Ertheia_bMakePotionAlchemy__eIcon pL2Ertheia_bMakePotionAlchemy__ePlus">
+                                </div>
+                                <div class="pL2Ertheia_bMakePotionAlchemy__eIcon pL2Ertheia_bMakePotionAlchemy__eWindStone">
+                                    <span>Камень<br>Ветра</span>
+                                </div>
+                                <i class="pL2Ertheia_bMakePotionAlchemy__eMouseOver">
+                                    Наведи
+                                </i>
+                                <div class="pL2Ertheia_bMakePotionAlchemy__eIcon pL2Ertheia_bMakePotionAlchemy__eReadyPotion">
+                                    <span>Зелье<br>Силы Ветра</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pL2Ertheia_bVideoPopup">
+                            <div class="pL2Ertheia_bVideoPopup__ePopupBigContainerVideo">
+                                <iframe src="http://www.youtube.com/embed/t_NHE-BLNE8/video/t_NHE-BLNE8" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="pL2Ertheia_bTabFieldPopup">
+                                <img
+                                	class="pL2Ertheia_bTabFieldPopup__еImage active"
+                                	src="http://i1.ytimg.com/vi/t_NHE-BLNE8/hqdefault.jpg" alt=""
+                                	data-bigVideo="http://www.youtube.com/embed/t_NHE-BLNE8/video/t_NHE-BLNE8">
+                                <img
+                                    class="pL2Ertheia_bTabFieldPopup__еImage"
+                                	src="http://i1.ytimg.com/vi/xbUHkCl2LSg/hqdefault.jpg" alt=""
+                                	data-bigVideo="http://www.youtube.com/embed/xbUHkCl2LSg" >
+                                <img
+                                    class="pL2Ertheia_bTabFieldPopup__еImage"
+                                	src="b/bVideoPopup/hqdefault.jpg" alt=""
+                                	data-bigVideo="http://www.youtube.com/embed/nB_Ty712etk" >
+                            </div>
+                        </div>
+                        <div class="pL2Ertheia_bLocationPopup">
+                            <div class="pL2Ertheia_bLocationPopup__eFlashContainer">
+                                <object type=application/x-shockwave-flash data='flash/l2_scene1.swf' class="pL2Ertheia_bLocationPopup__ePopupBigContainerPick">
+                                    <param name="movie" value="flash/l2_scene1.swf" class="pL2Ertheia_bFlashCurrent">
+                                    <param name="quality" value="high">
+                                    <param name="wmode" value="transparent" />
+
+                                    <a href="http://www.adobe.com/go/getflash">
+                                        <img class="pL2Ertheia_bLocationPopup____eImage" src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+                                    </a>
+                                </object>
+                            </div>
+
+                            <div class="pL2Ertheia_bTabFieldPopup">
+                                <img 
+                                    class="pL2Ertheia_bTabFieldPopup__еImage active"
+                                	src="b/bLocationPopup/pickLocation01__small.jpg" alt=""
+                                	data-bigPick="flash/l2_scene1.swf">
+                                <img
+                                    class="pL2Ertheia_bTabFieldPopup__еImage"
+                                	src="b/bLocationPopup/pickLocation02__small.jpg" alt=""
+                                	data-bigPick="flash/l2_scene2_out.swf" >
+                                <img
+                                    class="pL2Ertheia_bTabFieldPopup__еImage"
+                                	src="b/bLocationPopup/pickLocation03__small.jpg" alt=""
+                                	data-bigPick="flash/l2_scene3_out.swf" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pL2Ertheia_bModalDialog__eCloseBtn"></div>
+                </div>
+                <div class="pL2Ertheia_bModalDialog__eGlow">
+                    <img class="pL2Ertheia_bModalDialog__eGlowImage" src="b/bModalDialog/glow-popup.png" alt="">
+                </div>
+            </div>
+        </div>
+
+		<section class="bPanchoutPage">
+			<div class="bPanchoutMenuContainer">
+				<h3>Обновление 14.5
+					<span class="bPanchoutMenu__eDate">с 9.07.2014</span>
+				</h3>
+				<ul class="bPanchoutMenu">
+					<li class="active">
+						<a href="./index.html">Системные изменения</a>
+						<ul>
+							<li>Овервью</li>
+							<li>Рыбалка</li>
+							<li class="active">Осада Иного Измерения</li>
+							<li>Великая Олимпиада</li>
+							<li>Комиссионная торговля</li>
+							<li>Фестиваль хаоса</li>
+							<li>Торговец Маммона</li>
+						</ul>
+					</li>
+					<li><a href="./classes.html">Классы</a></li>
+					<li><a href="./zones.html">Зоны охоты</a></li>
+					<li><a href="./items.html">Предметы</a></li>
+					<li><a href="./quests.html">Квесты</a></li>
+					<li><a href="./other.html">Прочие изменения</a></li>
+				</ul>
+			</div>
+			<div class="bPanchoutContent">
+				# Системные изменения
+
+В Системе рыбалки произошел целый ряд важных изменений — и теперь цена на продажу рыбы и рыбных изделий равна 0 аден. Также изменилось количество предметов, необходимое для получения материалов. Ну а в Олимпиаде обновился список наград.
+
+_СКРИНШОТ_
+
+## Рыбалка
+
+1. Изменено количество предметов, необходимых для получения материалов для создания части головных уборов в Гильдии Рыболовов.
+
+2. Цена продажи рыбы и рыбных ингредиентов NPC Бакалейщикам изменена на 0 аден.
+
+3. Изменено количество рыбы, которую можно получить из Кита.   
+
+4. Снижена вероятность получения Китового Жира из Кита. Вероятность получения остальных видов рыбы повышена.                        
+
+5. Снижена цена продажи NPC Бакалейщикам наградных предметов, полученных во время рыбалки. Цена на предметы «Кит» и «Китовый Жир» изменена на 0 аден.
+
+6. Устранена проблема, когда при выполнении действия, не связанного с рыбалкой, появлялось системное сообщение о несоответствии ситуации.   
+
+7. Устранена проблема возможности входа на Рыбное Место при регистрации на участие в Олимпиаде.   
+
+8. Устранена проблема неправильного отображения информации о ночной рыбалке в Учебнике по Рыбалке.
+
+9. Исправлено написание словосочетания «Золотая Русалка» в описании умения «Энергия Грез».   
+
+10. Исправлена ошибка, когда направление, в котором смотрит рыбачащий персонаж, и направление поплавка отличались.                       
+
+_СКРИНШОТ_
+
+## Осада Иного Измерения
+
+1. Изменены условия участия в Осаде Иного Измерения.                       
+    * Кланы, не владеющие замком на локальном сервере, теперь могут участвовать в осаде. Лидер клана может переместиться на осадный сервер от Мермедена в любом городе и зарегистрировать свой 
+клан в любое время.
+    * Рядовые члены клана 99 уровня (не лидер) могут переместиться на осадный сервер от Мермедена в воскресенье с 18 до 22 часов.
+    * Теперь в Осаде Иного Измерения может участвовать свыше 70 членов клана.                        
+
+2. Энергию Иного Измерения и Слабую Энергию Иного Измерения теперь можно получить от Мермедена, даже если переместиться на осадный сервер невозможно.           
+
+3. Мермеден теперь сообщает о невозможности переместиться на осадный сервер, когда игрокам не удается повторно захватить замок после его захвата на локальном сервере.       
+
+4. Исправлена ошибка отсутствия Хранителя Портала в Шутгарте на осадном сервере.       
+
+5. Исправлена ошибка, когда на осадном сервере не действовали следующие умения:       
+    * Приманка;                        
+    * Отравляющая Зона;                        
+    * Отвлечение;                        
+    * Черная Дыра;                        
+    * Призыв Врат Смерти;                        
+    * Призвать Защитный Камень;                        
+    * Искаженное Пространство;                        
+    * Копия Клана.            
+
+_СКРИНШОТ_
+
+## Великая Олимпиада
+
+1. Представителям расы Артея добавлена возможность участвовать в классовых соревнованиях Олимпиады       
+    * Классы расы Артея Ненависть Вихря и Провидица Сайхи участвуют в качестве отдельных классов;
+    * В свободных соревнованиях все классы, включая классы Артея, участвуют по прежним правилам.                            
+
+2. Теперь очки Олимпиады сбрасываются до 10 при смене класса с использованием Эссенции Хаоса (для основного класса).
+    * Количество доступных поединков не сбрасывается при смене класса.            
+
+3. Исправлена ошибка, из-за которой класс претендента на звание Героя Олимпиады при использовании Эссенции Хаоса отображался как измененный.
+    * Претенденты на звание Героя Олимпиады не могут использовать Эссенцию Хаоса за 5 минут до и после конца периода Олимпиады.
+
+4. В список наград Олимпиады добавлены новые мантии и Зелья Защиты (Высший Ранг).
+    * Новые Зелья Защиты имеют дополнительный эффект «Получаемый урон в PvP - 3 %»
+    * Всего существуют 9 видов зелий: «Оглушение», «Удержание», «Кровотечение», «Паралич», «Ментальная Сила», «Усыпление», «Отравление», «Отталкивание/Опрокидывание» и «Воздушные Оковы» (стоимость: 220 Символов Олимпиады и 500 000 аден).
+    * К эффектам классовых мантий добавлены эффекты: «СИЛ +1», «ИНТ +1», «ВЫН +1», «ДУХ +1». Срок действия мантий — 20 дней; стоимость — 20 000 Символов Олимпиады.
+
+| Класс             | Название мантии                    |
+| ----------------- | ---------------------------------- |
+| Рыцарь Сигеля     | Хорошая Мантия Авелиуса — 20 дн.   |
+| Воин Тира         | Хорошая Мантия Сафироса — 20 дн.   |
+| Разбойник Одала   | Хорошая Мантия Кайшунаги — 20 дн.  |
+| Лучник Эура       | Хорошая Мантия Кронвиса — 20 дн.   |
+| Волшебник Фео     | Хорошая Мантия Сольткрига — 20 дн. |
+| Призыватель Веньо | Хорошая Мантия Набиаропа — 20 дн.  |
+| Заклинатель Иса   | Хорошая Мантия Райстера — 20 дн.   |
+| Целитель Альгиза  | Хорошая Мантия Лакисиса — 20 дн.   |
+| Ненависть Вихря   | Хорошая Мантия Сайхи — 20 дн.      |
+| Провидица Сайхи   | Хорошая Мантия Сайхи — 20 дн.      |
+
+
+_СКРИНШОТ_
+
+## Комиссионная торговля
+
+1. Теперь нельзя зарегистрировать предмет по цене меньшей, чем налог с продажи.
+
+2. Исправлена ошибка, при которой обычная Булава Якса отображалась в категории двуручного оружия в Комиссионной торговле.
+
+_СКРИНШОТ_
+
+## Фестиваль Хаоса
+
+1. Исправлена ошибка, при которой визуальный эффект зачарования не отображался на оружии при перемещении на арену/с арены Фестиваля Хаоса.                                                       
+
+_СКРИНШОТ_
+
+## Торговец Маммона
+
+1. Устранена проблема, когда при нехватке аден на покупку предметов у Торговца Маммона связь с сервером прерывалась.
+
+_СКРИНШОТ_
+
+## Способности
+
+1. В интерфейс Системы способностей добавлены названия трех уровней способностей:                           
+    * 1 ~ 7 очков: без названия                            
+    * 8 ~ 11 очков: шаг 1                            
+    * 12 ~ 14 очков: шаг 2                            
+    * 15 ~ 16 очков: шаг 3    
+
+2. Теперь невозможно изменять способности, участвуя в Фестивале Хаоса или Олимпиаде.
+    * Олимпиада: нельзя изменять способности с момента регистрации на поединок и до перемещения с арены.
+    * Фестиваль Хаоса: нельзя изменять способности с момента регистрации на поединок и до перемещения с арены.                            
+
+_СКРИНШОТ_
+
+## Кланы
+
+1. Устранена проблема некорректного отображения состояния войны или захвата базы клана, а также невозможности входа/выхода из клана.                           
+
+2. Устранена проблема некорректного отображения имен персонажей по ссылке на странице клана.
+			</div>
+		</section>
+        
+    </body>
+</html>

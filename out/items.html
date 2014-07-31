@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link href="b/l2-ertheia.css" rel="stylesheet" type="text/css">
+
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/preload.js"></script>
+        <script src="js/common.js"></script>
+    </head>
+    <body class="pL2Ertheia">
+        <div class="bSetUnneededItems" style="position: absolute; top: -999px;">
+            <img src="b/bPlanets/alchemy-hover.gif">
+            <img src="b/bPlanets/classes2-hover.gif">
+            <img src="b/bPlanets/locations-hover.gif">
+            <img src="b/bPlanets/video-hover.png">
+        </div>
+
+        <div id="bMainContent" class="pL2Ertheia_bMainContent">
+            <nav class="pL2Ertheia_bPlanets">
+                <a class="pL2Ertheia_bPlanets__ePlanet pL2Ertheia_bPlanets__ePlanet_mClasses">
+                    Классы
+                </a>
+                <a class="pL2Ertheia_bPlanets__ePlanet pL2Ertheia_bPlanets__ePlanet_mAlchemy">
+                    Алхимия
+                </a>
+                <a class="pL2Ertheia_bPlanets__ePlanet pL2Ertheia_bPlanets__ePlanet_mVideo">
+                    Видео
+                </a>
+                <a class="pL2Ertheia_bPlanets__ePlanet pL2Ertheia_bPlanets__ePlanet_mLocation">
+                    Локации
+                </a>
+            </nav>
+
+            <div class="pL2Ertheia_bMainContent__eTopText">
+                <h1>
+                    Новая раса Артея
+                </h1>
+                <p>
+                    Впервые в истории Lineage 2 — в бой вступают дети бога ветра.
+                    Новая раса воинственных девушек наделена сокрушительной силой
+                    ветра и умением создавать предметы.
+                </p>
+            </div>
+            <div class="pL2Ertheia_bMainContent__eRightText">
+                <img src="b/bMainContent/ertheiaLogo.png" alt="Ertheia">
+                <p>
+                    С новой расой пришли
+                    и другие важные перемены.
+                    Эффективность умений классов
+                    стала выше, а возможности
+                    использования предметов &mdash;
+                    шире.
+                </p>
+            </div>
+            <div class="pL2Ertheia_bMainContent__eDownloadButton"></div>
+
+            <div class="pL2Ertheia_bPersonages">
+                <div class="pL2Ertheia_bPersonage1">
+                    <div class="pL2Ertheia_bPersonage1__eHeadPersonage"></div>
+                    <div class="pL2Ertheia_bPersonage1__eEars pL2Ertheia_bPersonage1__eEars_mEarLeft"></div>
+                    <div class="pL2Ertheia_bPersonage1__eEars pL2Ertheia_bPersonage1__eEars_mEarRight"></div>
+                    <div class="pL2Ertheia_bPersonage1__eHeadHair"></div>
+                </div>
+                <div class="pL2Ertheia_bPersonage2">
+                    <div class="pL2Ertheia_bPersonage2__eHeadPersonage">
+                    </div>
+                </div>
+            </div>
+
+            <div class="pL2Ertheia_bAlchemyAction">
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_1"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_2"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_3"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_4"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_5"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_6"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_7"></div>
+                <div class="pL2Ertheia_bAlchemyAction__eFeathers pL2Ertheia_bAlchemyAction__eFeathers_mFeather_8"></div>
+            </div>
+
+            <div class="pL2Ertheia_bOverlay"></div>
+            <div class="pL2Ertheia_bModalDialog__eContainer">
+                <div class="pL2Ertheia_bModalDialog">
+                    <div class="pL2Ertheia_bModalDialog__eContent">
+                        <div class="pL2Ertheia_bClassesPopup">
+                            <h3 class="pL2Ertheia_bModalDialog__eTitle">
+                                Выбери новый класс
+                            </h3>
+                            <div class="pL2Ertheia_bClassesPopup__eBackground">
+                                <div class="pL2Ertheia_bClassesPopup__eSides pL2Ertheia_bClassesPopup__eSides_mSide_left">
+                                    <h4>
+                                        Воин Артея
+                                    </h4>
+                                    <p>
+                                        Обладает разрушительной силой гравитационного натиска.
+                                        Быстро атакует цель, с разных сторон окружая потоками воздуха.
+                                        С помощью силы гравитации создает вокруг себя безопасную зону. 
+                                    </p>
+                                    <p>
+                                        Перехватывает инициативу и позволяет союзникам безопасно выйти из сражения.
+                                    </p>
+                                </div>
+                                <div class="pL2Ertheia_bClassesPopup__eSides pL2Ertheia_bClassesPopup__eSides_mSide_right">
+                                    <h4>
+                                        Маг Артея
+                                    </h4>
+                                    <p>
+                                        Атрея использует в атаке магию ближнего боя. Наносит урон цели
+                                        и всем врагам, стоящим рядом. Порывом ветра защищает соратникови обессиливает противника. 
+                                    </p>
+                                    <p>
+                                        Предпочитает две тактики: стремительно поражает врага силой
+                                        ветра или выжидаетмомент и нападаетс неожиданной стороны.                                                
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pL2Ertheia_bAlchemyPopup">
+                            <h3 class="pL2Ertheia_bModalDialog__eTitle">
+                                Постигни тайное знание
+                            </h3>
+                            <div class="pL2Ertheia_bAlchemyPopup__eDescription">
+                                <p>
+                                    Благодаря природной изобретательности
+                                    и способности правильно расходовать
+                                    ману, артеи освоили Алхимию — особое
+                                    умение, которого нет у других классов.
+                                </p>
+                                <p>
+                                    Используя силу ветра, они превращают одни
+                                    предметы в другие и при желании продают
+                                    их за адены.
+                                </p>
+                            </div>
+                            <div class="pL2Ertheia_bMakePotionAlchemy">
+                                <div class="pL2Ertheia_bMakePotionAlchemy__eIcon pL2Ertheia_bMakePotionAlchemy__eHealthPotion">
+                                    <span>Зелье<br>Исцеления</span>
+                                </div>
+                                <div class="pL2Ertheia_bMakePotionAlchemy__eIcon pL2Ertheia_bMakePotionAlchemy__ePlus">
+                                </div>
+                                <div class="pL2Ertheia_bMakePotionAlchemy__eIcon pL2Ertheia_bMakePotionAlchemy__eWindStone">
+                                    <span>Камень<br>Ветра</span>
+                                </div>
+                                <i class="pL2Ertheia_bMakePotionAlchemy__eMouseOver">
+                                    Наведи
+                                </i>
+                                <div class="pL2Ertheia_bMakePotionAlchemy__eIcon pL2Ertheia_bMakePotionAlchemy__eReadyPotion">
+                                    <span>Зелье<br>Силы Ветра</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pL2Ertheia_bVideoPopup">
+                            <div class="pL2Ertheia_bVideoPopup__ePopupBigContainerVideo">
+                                <iframe src="http://www.youtube.com/embed/t_NHE-BLNE8/video/t_NHE-BLNE8" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="pL2Ertheia_bTabFieldPopup">
+                                <img
+                                	class="pL2Ertheia_bTabFieldPopup__еImage active"
+                                	src="http://i1.ytimg.com/vi/t_NHE-BLNE8/hqdefault.jpg" alt=""
+                                	data-bigVideo="http://www.youtube.com/embed/t_NHE-BLNE8/video/t_NHE-BLNE8">
+                                <img
+                                    class="pL2Ertheia_bTabFieldPopup__еImage"
+                                	src="http://i1.ytimg.com/vi/xbUHkCl2LSg/hqdefault.jpg" alt=""
+                                	data-bigVideo="http://www.youtube.com/embed/xbUHkCl2LSg" >
+                                <img
+                                    class="pL2Ertheia_bTabFieldPopup__еImage"
+                                	src="b/bVideoPopup/hqdefault.jpg" alt=""
+                                	data-bigVideo="http://www.youtube.com/embed/nB_Ty712etk" >
+                            </div>
+                        </div>
+                        <div class="pL2Ertheia_bLocationPopup">
+                            <div class="pL2Ertheia_bLocationPopup__eFlashContainer">
+                                <object type=application/x-shockwave-flash data='flash/l2_scene1.swf' class="pL2Ertheia_bLocationPopup__ePopupBigContainerPick">
+                                    <param name="movie" value="flash/l2_scene1.swf" class="pL2Ertheia_bFlashCurrent">
+                                    <param name="quality" value="high">
+                                    <param name="wmode" value="transparent" />
+
+                                    <a href="http://www.adobe.com/go/getflash">
+                                        <img class="pL2Ertheia_bLocationPopup____eImage" src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+                                    </a>
+                                </object>
+                            </div>
+
+                            <div class="pL2Ertheia_bTabFieldPopup">
+                                <img 
+                                    class="pL2Ertheia_bTabFieldPopup__еImage active"
+                                	src="b/bLocationPopup/pickLocation01__small.jpg" alt=""
+                                	data-bigPick="flash/l2_scene1.swf">
+                                <img
+                                    class="pL2Ertheia_bTabFieldPopup__еImage"
+                                	src="b/bLocationPopup/pickLocation02__small.jpg" alt=""
+                                	data-bigPick="flash/l2_scene2_out.swf" >
+                                <img
+                                    class="pL2Ertheia_bTabFieldPopup__еImage"
+                                	src="b/bLocationPopup/pickLocation03__small.jpg" alt=""
+                                	data-bigPick="flash/l2_scene3_out.swf" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pL2Ertheia_bModalDialog__eCloseBtn"></div>
+                </div>
+                <div class="pL2Ertheia_bModalDialog__eGlow">
+                    <img class="pL2Ertheia_bModalDialog__eGlowImage" src="b/bModalDialog/glow-popup.png" alt="">
+                </div>
+            </div>
+        </div>
+
+		<section class="bPanchoutPage">
+			<div class="bPanchoutMenuContainer">
+				<h3>Обновление 14.5
+					<span class="bPanchoutMenu__eDate">с 9.07.2014</span>
+				</h3>
+				<ul class="bPanchoutMenu">
+					<li class="active">
+						<a href="./index.html">Системные изменения</a>
+						<ul>
+							<li>Овервью</li>
+							<li>Рыбалка</li>
+							<li class="active">Осада Иного Измерения</li>
+							<li>Великая Олимпиада</li>
+							<li>Комиссионная торговля</li>
+							<li>Фестиваль хаоса</li>
+							<li>Торговец Маммона</li>
+						</ul>
+					</li>
+					<li><a href="./classes.html">Классы</a></li>
+					<li><a href="./zones.html">Зоны охоты</a></li>
+					<li><a href="./items.html">Предметы</a></li>
+					<li><a href="./quests.html">Квесты</a></li>
+					<li><a href="./other.html">Прочие изменения</a></li>
+				</ul>
+			</div>
+			<div class="bPanchoutContent">
+				<h1 id="-">Предметы</h1>
+<p>Обладатели Талисмана Вожделения теперь могут улучшить его до Талисмана из Позолоченного Дерева. А любителей крафтить порадует возможность случайным образом получить из сундуков рецепты рангов R/R95/R99.</p>
+<h2 id="-">Кулоны</h2>
+<ol>
+<li><p>В связи с введением новых характеристик (LUC, CHA) в игру добавлены кулоны с соответствующими бонусами.   </p>
+</li>
+<li><p>У NPC — Членов Союза за Восстановление Адена можно обменять вставленные в головные уборы кулоны на Запечатанные Кулоны.<br><em>СКРИНШОТ</em></p>
+<ul>
+<li>Запечатанные Кулоны — предметы, необходимые для создания случайных кулонов. </li>
+<li>При обмене на Запечатанный Кулон головной убор исчезает.    </li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>Добавлены схемы создания случайных кулонов.<ul>
+<li>Схемы создания случайных кулонов может применять только Мастер Тира.</li>
+<li>Схему можно с определенной вероятностью получить при использовании Печати Воли.</li>
+<li>При создании случайного кулона игрок со 100%-ной вероятностью получает кулон, дающий бонус к базовым характеристикам персонажа.    </li>
+</ul>
+</li>
+</ol>
+<h2 id="-">Рецепты</h2>
+<ol>
+<li><p>Добавлены случайные рецепты рангов R/R95/R99.
+ <em>СКРИНШОТ</em></p>
+<ul>
+<li>Данные рецепты позволяют получить один предмет снаряжения (оружие/броню/аксессуар), доступного для изготовления на данном уровне.</li>
+<li>Снаряжение появляется в сундуке. Из него с определенной вероятностью можно получить Благословенный Предмет.</li>
+<li>Необходимые для создания материалы и рецепты можно получить присвоением в полевых зонах охоты.</li>
+</ul>
+</li>
+<li><p>Добавлены рецепты трех видов, позволяющие разбирать снаряжение рангов R/R95/R99.
+ <em>СКРИНШОТ</em></p>
+<ul>
+<li>Получить рецепты можно в рейдах на боссов (Антарас, Валакас, Линдвиор, Экстремальная Истхина, Земляной Червь, Экстремальный Октавис, Экстремальный Таути). Применять их могут только Мастера Тира.</li>
+<li>После применения рецепта можно разбирать соответствующие предметы.</li>
+<li>При разборе вероятности неудачи нет — игрок гарантированно получает сундук с компонентами предмета.</li>
+<li>Разбор снаряжения с Душой или снаряжения, дающего особые бонусы, невозможен. Других наград согласно уровню Зачарования не предусмотрено.    </li>
+</ul>
+</li>
+</ol>
+<h2 id="-">Талисманы</h2>
+<ol>
+<li><p>Добавлена функция улучшения Талисмана Вожделения до нового предмета — Талисмана из Позолоченного Дерева.</p>
+<ul>
+<li>Создание Талисмана из Позолоченного Дерева возможно путем «составления».<br><em>СКРИНШОТ</em>   </li>
+<li>Запечатать Талисман из Позолоченного Дерева, как и Талисман Вожделения, можно у Управляющего Талисманами Семени.
+<em>СКРИНШОТ</em></li>
+<li>Запечатанный Талисман можно продать или обменять.        </li>
+</ul>
+</li>
+<li><p>Для запечатывания Талисмана Вожделения теперь нужен не Самоцвет: Ранг R, а Сила Гигантов.</p>
+</li>
+<li><p>У торговца украшениями в Беноне продается Талисман Бенира, который можно усилить.</p>
+<ul>
+<li>Талисман Бенира с определенной вероятностью можно усилить, если объединить 2 данных предмета одинакового уровня.    </li>
+</ul>
+</li>
+</ol>
+<h2 id="-">Прочие изменения</h2>
+<ol>
+<li><p>Изменен список материалов, необходимых для обмена на Браслет Агатиона в магазине фирменных вещей «Александрия» в Гиране.</p>
+<ul>
+<li>После смерти персонажа больше не исчезает эффект предметов «Настойка Всплеска Энергии» и «Зелье Поддержания Энергии (30 мин.)».</li>
+</ul>
+</li>
+<li><p>Иконка Припасов Преторианца теперь отображается корректного.</p>
+</li>
+<li><p>В описание свойств предмета «Руна Квалификации» добавлена детальная информация.</p>
+</li>
+<li><p>В описание свойств предмета «Удочка Героя» добавлена детальная информация. </p>
+</li>
+<li><p>В описание предмета «Книга Ученика» добавлена информация об эффекте «Заряд Души», возникающем после изменения его внешнего вида.</p>
+</li>
+<li><p>Кастеты, надетые персонажем в Плавательном костюме, отображаются корректно.</p>
+</li>
+<li><p>Исправлены установки физической атаки Парных Кинжалов Линдвиора.</p>
+</li>
+<li><p>Устранена проблема, когда у предмета «Браслет Арии» не применялась опция максимального увеличения HP на 531.</p>
+</li>
+<li><p>Изменено описание умения «Дыхание Когтя Дракона» (оружие мирового босса) высшего уровня.</p>
+</li>
+<li><p>Исправлена ошибка, при которой не применялась задержка повторного применения предмета «Рыбное Рагу».</p>
+</li>
+<li><p>Звук при удалении Печати Агатиона при надевании предмета «Браслет Призыва Агатиона: Фея» теперь воспроизводится нормально.    </p>
+</li>
+<li><p>Из Сундука Поддержки Тома удален предмет «Сундук Поддержки Судьбы».</p>
+</li>
+<li><p>Теперь нельзя получить снаряжение Железных Врат с ограниченным периодом использования при обмене Монет Железных Врат.</p>
+</li>
+<li><p>В список оружия, которое можно получить в обмен на Монеты Железных Ворот, добавлены двуручные дубины рангов D–S.</p>
+</li>
+<li><p>Вес Руды Души изменен на «0».</p>
+</li>
+<li><p>Немного увеличена вероятность успеха при создании магического оружия.</p>
+</li>
+<li><p>Отменены условия для ношения мантий ранга S и выше.</p>
+<ul>
+<li>При несоответствии уровня персонажа уровню мантии, налагается штраф.</li>
+</ul>
+</li>
+<li><p>Можно отправлять предметы персонажам одной учетной записи через NPC-Алхимика.</p>
+</li>
+<li><p>Добавлена функция обмена предметов с опциями «Кровавый»/«Тьмы» на предметы с опциями «Тьмы»/«Кровавый» у Кузнеца Маммона.</p>
+</li>
+<li><p>Получить Свитки Снятия Оков после смерти рейдовых монстров/боссов теперь нельзя.</p>
+</li>
+<li><p>Снижена цена на покупку в магазинах снаряжения без ранга – ранга B (оружие, доспехи, аксессуары).</p>
+</li>
+<li><p>Уменьшено количество кристаллов, получаемых после кристаллизации снаряжения рангов D–B, доступных для покупки в магазинах.</p>
+</li>
+<li><p>Уменьшено количество материалов, необходимых для создания снаряжения рангов D–B, доступных для покупки в магазинах.</p>
+</li>
+<li><p>Проблема, когда было невозможно изменить внешний вид ряда головных уборов, устранена.</p>
+</li>
+<li><p>Исправлена ошибка, при которой не изменялся цвет волос персонажа после применения Красящего зелья.</p>
+</li>
+<li><p>У NPC-торговцев каждой расы на Говорящем острове теперь можно купить кастеты и двуручные посохи без ранга.</p>
+</li>
+<li><p>Изменен порядок отображения предметов на продажу у NPC.    </p>
+</li>
+<li><p>Появилась возможность добавления бонуса точности к Одноручному Топору Таути, Двуручному Топору Таути, Парным Топора Таути и Топору Таути.</p>
+</li>
+<li><p>Устранена проблема невозможности получения Кодекса Гигантов после убийства определенных NPC.    </p>
+<ul>
+<li>Испорченный Азоф больше не установлен как необходимый материал для следующих рецептов: «Эликсир Ментальной Силы (Ранг B)», «Эликсир Ментальной Силы (Ранг A)», «Эликсир Ментальной Силы (Ранг S)».</li>
+</ul>
+</li>
+<li><p>Модификации внешнего вида теперь сбрасываются во время обмена оружия или редкой брони у Кузнеца Маммона.</p>
+</li>
+<li><p>Возможно использовать предмет для восстановления энергии без задержки повторного использования.    </p>
+</li>
+<li><p>Обычная Булава Якса при комиссионной продаже больше не распознается как двуручное оружие.</p>
+</li>
+<li><p>Устранена проблема невозможности хранения на Складе Клана Свитка 1 000 000 SP.</p>
+</li>
+<li><p>Исправлена ошибка, при которой предмет нельзя было использовать даже несмотря на то, что все условия удовлетворяются.</p>
+</li>
+<li><p>К эффектам Свитка Ветра Фреи добавлено повышение получаемых SP.</p>
+</li>
+<li><p>После открытия личной лавки свойства и внешний вид товаров отображаются корректно.</p>
+</li>
+<li><p>Шлем Воина больше не отображается на ногах персонажа.</p>
+</li>
+<li><p>При использовании предмета «Книга Древних – Божественное Вдохновение» (нач./ср. уровни) больше не выводится ненужное системное сообщение.</p>
+</li>
+<li><p>Исправлены неточности в информации о количестве получаемых SP в описании ряда SP-свитков.</p>
+</li>
+<li><p>Исправлены неточности в информации о выпадении, обмене, личных лавках и хранении на складе для усиливающих доспехи/оружие Камней Гигантов и Ветра — ранг R.</p>
+</li>
+<li><p>Снижена цена на продажу снаряжения ранга B в магазинах фирменных вещей.</p>
+</li>
+<li><p>В случае неудачи Зачарования с помощью Камня Модификации Фреи уровень предмета больше не отображается как «+ 0».</p>
+</li>
+<li><p>Увеличена плата за создание Парных Кинжалов ранга A.</p>
+</li>
+<li><p>На продажу и количество кристаллов для ряда оружия ранга B установлена некорректная цена.</p>
+</li>
+<li><p>Информация о времени повторного применения умения «Талисман ветра – Защита»/«Защита от Злых Чар» теперь отображается корректно.    </p>
+</li>
+<li><p>На мантии клана, надетой вместе с предметом, превращенным в Костюм Деда Мороза, теперь отображается знак клана.</p>
+</li>
+<li><p>Исправлена ошибка, при которой часть головных уборов типа «Бантик» занимали только один слот для головных уборов.</p>
+<ul>
+<li>Если на персонаже надеты Бантик и другой головной убор, то в инвентаре может отобразиться надетым только Бантик, однако если снять головной убор и снова открыть инвентарь, то ситуация нормализуется.</li>
+</ul>
+</li>
+<li><p>Уровень лабиринта персонажа в описании предмета «Билет в Лабиринт Императора – Ур. 90/95» (группа) теперь отображается корректно.</p>
+</li>
+<li><p>Исправлена ошибка, при которой у персонажей-Орков, использующих Музыкальный Инструмент, символ отображался только в правой руке.</p>
+</li>
+<li><p>Теперь отображается детальная информация по параметрам эффектов «Все характеристики» и «Все параметры».</p>
+</li>
+<li><p>Название предмета и умения «Талисман Ветра – магический/физический критический урон» изменено на «Критический урон».</p>
+</li>
+<li><p>Треугольный знак на предмете при использовании Камня Обработки, позволяющего полностью изменить его внешний вид, больше не отображается в зеленом цвете.</p>
+</li>
+<li><p>При использовании Свитка SP 5000 больше не появляется системное сообщение «Вы используете Свиток SP 50000».</p>
+</li>
+<li><p>Скорость персонажа, находящегося под воздействием эффекта увеличения скорости перемещения, на Сияющей Освещенной Сцене не становится слишком высокой.</p>
+</li>
+<li><p>Изменена иконка предмета и умения «Зелье Удачи Мафр».</p>
+</li>
+<li><p>В информации о предмете «Зелье Удачи Мафр» больше не отображается время повторного применения.</p>
+</li>
+<li><p>Во время усиления предмета при помощи Свитка Гигантов + 3 теперь выводится предупреждающее системное сообщение.</p>
+</li>
+<li><p>Графический эффект «Зачарование оружия Темный/Кровавый Воитель Хелиоса» теперь отображается корректно.</p>
+<ul>
+<li>Исправлена ошибка, при которой ряд головных уборов, надетых персонажами расы Артея, отображался как «Модная Шляпа»: «Модная Шляпа с Перьями», «Элегантная Голубая Модная Шляпа», «Элегантная Зеленая Модная Шляпа», «Элегантная Красная Модная Шляпа».</li>
+<li>Устранена проблема некорректного отображения следующих предметов, надеваемых персонажами расы Артея: «Модная Шляпа Удачи», «Модная Шляпа Харизмы», «Элегантная Модная Шляпа», «Перчатки Знаний», «Сапоги Знаний».</li>
+</ul>
+</li>
+<li><p>Исправлена ошибка, при которой персонажи рас Камаэль и Артея не могли надевать ряд доспехов.</p>
+</li>
+<li><p>Модель персонажа расы Артея, надевшего Тунику или Штаны Ученика, теперь отображается правильно.</p>
+</li>
+<li><p>Элегантная Шляпа и Модная Шляпа больше не отображаются на персонажах расы Артея слишком темными.</p>
+</li>
+<li><p>Персонажи расы Артея теперь могут использовать предмет «Упаковка: Комплект Снаряжения 90 дн.»</p>
+</li>
+<li><p>Персонажи расы Артея теперь могут использовать Свиток Призыва: Ненавистный Демон.</p>
+</li>
+<li><p>Перчатки/Ботинки Таллума больше не отображаются на персонажах расы Артея как Латные Перчатки/Ботинки Кошмаров.</p>
+</li>
+<li><p>Мантия Кристалла Тьмы больше не отображается на персонажах расы Артея как Мантия Кошмаров.</p>
+</li>
+</ol>
+
+			</div>
+		</section>
+        
+    </body>
+</html>
