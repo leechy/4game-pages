@@ -1,0 +1,83 @@
+.pL2Ertheia {
+	&_bModalDialog {
+		position: relative;
+		border:22px solid #001d29;
+		width:736px;
+		margin: 0 0 -20px -21px;
+		border-radius: 7px;
+		-webkit-box-shadow: 0 0 150px 0 rgba(255, 255, 255, 0.45);
+		box-shadow: 0 0 150px 0 rgba(255, 255, 255, 0.45);
+
+		&__eContainer {
+			position: absolute;
+			z-index: 900;
+			top: 45%;
+			left: 50%;
+			width: 736px;
+			height: 600px;
+			display: none;
+			
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+	
+		&__eGlow {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: none;
+		}
+		&__eGlowImage {
+			position: absolute;
+			top: -75%;
+			left: -50%;
+			width: 200%;
+			height: 220%;
+			background: 0 0;
+			border: 0;
+			outline: none;
+			pointer-events: none;
+		}
+
+		&__eCloseBtn {
+			position: absolute;
+			top: -36px; right: -37px;
+			background: url('bModalDialog/close.png');
+			width:30px; height: 30px;
+			cursor: pointer;
+		
+			&:hover {
+				background-position: top right;
+			}
+		}
+
+		&__eContent {
+			position: relative;
+			z-index: 999;
+			width:100%; min-height: 360px;
+			color:#fff;
+			background: #012a40;
+			background: -ms-linear-gradient(top, #012a40 0%,#014a68 100%);
+			background: linear-gradient(to bottom, #012a40 0%,#014a68 100%);
+		
+			> div {
+				display: none;
+			}
+		}
+
+		&__eTitle {
+			margin: 0;
+			font-weight: 700;
+			font-size: 30px;
+			color: #fff;
+			text-align: center;
+			padding: 46px 0 40px 0;
+		}
+	}
+}

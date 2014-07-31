@@ -35,6 +35,17 @@ docpadConfig = {
             else
                 @site.title
 
+    # =================================
+    # Plugin Configuration
+
+    # Configure Plugins
+    # Should contain the plugin short names on the left, and the configuration to pass the plugin on the right
+    plugins:
+        marked:
+        	pedantic: false
+			gfm: true
+			tables: true
+
 }
 
 # Export the DocPad Configuration
