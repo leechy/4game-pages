@@ -1,0 +1,98 @@
+@import url('font.less');
+
+/* переопределения и модификаторы для общих блоков */
+@import url('bWidePageMaxWidth.less');
+@import url('bGamePanelFixed.less');
+
+@import url('pPS2_bLayout/pPS2_bLayout.less');
+
+@import url('pPS2_scene/pPS2_scene_0.less');
+@import url('pPS2_scene/pPS2_scene_1.less');
+@import url('pPS2_scene/pPS2_scene_2.less');
+@import url('pPS2_scene/pPS2_scene_3.less');
+@import url('pPS2_scene/pPS2_scene_4.less');
+@import url('pPS2_scene/pPS2_scene_5.less');
+
+@import url('pPS2_menu/pPS2_menu.less');
+
+@import url('pPS2_pages/pPS2_insidePage.less');
+@import url('pPS2_pages/pPS2_insidePage4.less');
+
+@animationSpeed: 1s;
+@animationSpeedAbility: 0.6s;
+@animationSpeedGround: 0.9s;
+@layout-min-width: 980px;
+@HeadingFont: "Geogrotesque",Tahoma,sans-serif;
+@global-new-ui-white: #fff;
+@TextFont: 14px;
+@userbar-height: 35px;
+@animationSpeedInfo: 0.1s;
+@animationDelayInfo: 1.5s;
+
+@animationSpeedRaces: 0.1s;
+@animationDelayRaces: @animationSpeed;
+
+@animationAcceleration: 0.8s;
+
+@animationSpeedPlanet: @animationSpeed * 1;
+
+.transforms(@tranforms) {
+	-webkit-transform: @tranforms;
+	transform: @tranforms;
+}
+.transform(@tranform) {
+	-webkit-transform: @tranform;
+	transform: @tranform;
+}
+.opacity(@opacity) {
+	opacity: @opacity;
+}
+.transition(@transition) {
+	-webkit-transition: @transition;
+	transition: @transition;
+}
+.box-shadow(@x, @y, @size, @alpha, @red, @green, @blue, @spread: 0) {
+	-webkit-box-shadow: @x @y @size @spread rgba(@red, @green, @blue, @alpha);
+	box-shadow: @x @y @size @spread rgba(@red, @green, @blue, @alpha);
+}
+.text-shadow (@shadow) {
+	text-shadow: @shadow;
+}
+.animation(@animation) {
+	-ms-animation: @animation;
+	-webkit-animation: @animation;
+	-moz-animation: @animation;
+	-o-animation: @animation;
+	animation: @animation;
+}
+.transition-props(@opacityRate: 0.2) {
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    -webkit-transition-duration: @animationSpeed, @animationSpeed * @opacityRate;
+    transition-duration: @animationSpeed, @animationSpeed * @opacityRate;
+}
+
+.transition-delay(@delayOpacityRate: 0.5) {
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    -webkit-transition-delay: 0s, @animationSpeed * @delayOpacityRate;
+    transition-delay: 0s, @animationSpeed * @delayOpacityRate;
+}
+
+.textBackgroundBlack() {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPg0KPHJhZGlhbEdyYWRpZW50IGlkPSJnNTExIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNTAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMDAwMDAwIiBvZmZzZXQ9IjAiIHN0b3Atb3BhY2l0eT0iMC44Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwMDAwMCIgb2Zmc2V0PSIwLjIiIHN0b3Atb3BhY2l0eT0iMC44Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwMDAwMCIgb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNnNTExKSIgLz48L3N2Zz4=);
+    background-image: -webkit-gradient(radial, center, 0px, center, 100%, color-stop(0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.8)), color-stop(100%, rgba(0,0,0,0)));
+    background-image: -webkit-radial-gradient(center, ellipse closest-side,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%);
+    background-image: -moz-radial-gradient(center, ellipse closest-side,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%);
+    background-image: -o-radial-gradient(center, ellipse closest-side,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%);
+    background-image: radial-gradient(ellipse closest-side at center,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%);
+}
+
+.textBackgroundBlue() {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPg0KPHJhZGlhbEdyYWRpZW50IGlkPSJnNTExIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNTAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMmM1OTgwIiBvZmZzZXQ9IjAiIHN0b3Atb3BhY2l0eT0iMC44Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzJjNTk4MCIgb2Zmc2V0PSIwLjIiIHN0b3Atb3BhY2l0eT0iMC44Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzJjNTk4MCIgb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNnNTExKSIgLz48L3N2Zz4=);
+    background-image: -webkit-gradient(radial, center, 0px, center, 100%, color-stop(0%, rgba(44,89,128,0.8) 20%, rgba(44,89,128,0.8)), color-stop(100%, rgba(44,89,128,0)));
+    background-image: -webkit-radial-gradient(center, ellipse closest-side,  rgba(44,89,128,0.8) 0%, rgba(44,89,128,0.8) 20%, rgba(44,89,128,0) 100%);
+    background-image: -moz-radial-gradient(center, ellipse closest-side,  rgba(44,89,128,0.8) 0%, rgba(44,89,128,0.8) 20%, rgba(44,89,128,0) 100%);
+    background-image: -o-radial-gradient(center, ellipse closest-side,  rgba(44,89,128,0.8) 0%, rgba(44,89,128,0.8) 20%, rgba(44,89,128,0) 100%);
+    background-image: radial-gradient(ellipse closest-side at center,  rgba(44,89,128,0.8) 0%, rgba(44,89,128,0.8) 20%, rgba(44,89,128,0) 100%);
+}

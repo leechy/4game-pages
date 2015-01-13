@@ -1,0 +1,285 @@
+.pPS2_scene_internal_41 {
+    & .pPS2_scene__info-races-tabs-item__race-vanu {
+        cursor: default;
+        pointer-events: none;
+        & .pPS2_scene__info-races-tabs-image {
+            background-position: 0 0;
+        }
+        & .pPS2_scene__info-races-tabs-text {
+            border: none;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+ .pPS2_scene_internal_42 {
+    & .pPS2_scene__info-races-tabs-item__race-terran {
+        cursor: default;
+        pointer-events: none;
+        & .pPS2_scene__info-races-tabs-image {
+            background-position: 0 0;
+        }
+        & .pPS2_scene__info-races-tabs-text {
+            border: none;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+ }
+
+  .pPS2_scene_internal_43 {
+    & .pPS2_scene__info-races-tabs-item__race-conglomerate {
+        cursor: default;
+        pointer-events: none;
+        & .pPS2_scene__info-races-tabs-image {
+            background-position: 0 0;
+        }
+        & .pPS2_scene__info-races-tabs-text {
+            border: none;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+ }
+
+.pPS2_insidePage4 {
+    &__menuLink {
+        display: block;
+        float:left;
+        margin: 0 5px 0 0;
+        padding: 5px 0 0 55px;
+        width: 125px;
+        position: relative;
+        height: 45px;
+        background-position: 0 -100px;
+        background-repeat: no-repeat;
+        text-align: left;
+        color:#1de1f7;
+        &__type_vanu {
+            background-image: url(~'@{interfacePath}/vanu.png');
+        }
+        &__type_terran {
+            background-image: url(~'@{interfacePath}/terran.png');
+        }
+        &__type_сonglomerate {
+            background-image: url(~'@{interfacePath}/сonglomerate.png');
+        }
+        &:hover {
+            background-position: 0 -50px;
+            color: #aff3fb;
+        }
+        &__mState_active {
+            background-position: 0 0;
+            color: #fff;
+            &:hover {
+                background-position: 0 0;
+                color: #fff;
+            }
+        }
+    }
+    &__topContent {
+        position: absolute;
+        width: 315px;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: none;
+        left: 50px;
+        top: 265px;
+        &__type_vanu {
+            left: auto;
+            right: 40px;
+        }
+        &__type_terran {
+            left: 55px;
+            top: 150px;
+        }
+        &__type_conglomerate {
+            left: 55px;
+            top: 150px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 190%;
+            top: -45%;
+            left: -25%;
+            margin: 0 0 0 -20px;
+            .textBackgroundBlack();
+        }
+    }
+    &__videoWrapper {
+        position: absolute;
+        top: 320px;
+        width: 100%;
+        height: 0;
+        text-align: center;
+        pointer-events: initial;
+    }
+    &__videoLink {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 26px;
+        text-decoration: none;
+        color:#1de1f7;
+        &:hover {
+            color: #aff3fb;
+            & .pPS2_insidePage4__videoImg {
+                border-color: #aff3fb;
+                .animation(pPS2_scene__info-video-hover 0.6s steps(1, end) infinite);
+            }
+        }
+    }
+    &__headerLink {
+        color:#1de1f7;
+        &:hover {
+            color: #aff3fb;
+        }
+    }
+    &__dottedText {
+        border-bottom: 1px dashed;
+    }
+    &__videoImg {
+        position: relative;
+        z-index: 2;
+        width: 192px;
+        height: 100px;
+        margin: 0 auto;
+        border: 1px solid #1de0f7;
+        
+        &_vanu {
+            background: url("/b/pPS2/pPS2_pages/i/vanu_sprite.jpg") 0 0 no-repeat;
+        }
+        
+        &_сonglomerate {
+            background: url("/b/pPS2/pPS2_pages/i/conglomerate_sprite.jpg") 0 0 no-repeat;
+        }
+        
+        &_terran {
+            background: url("/b/pPS2/pPS2_pages/i/terran_sprite.jpg") 0 0 no-repeat;
+        }
+    }
+    
+    &__play-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -15px;
+        margin-left: -18px;
+    }
+    
+    &-play-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -15px;
+        margin-left: -18px;
+    }
+        
+    &__map {
+        position: absolute;
+        top: 450px;
+        top: 530px;
+        left: 40px;
+    }
+    &__addictWrapper {
+        position: relative;
+        margin: 505px 0 0;
+        pointer-events: initial;
+    }
+    &__addictContent {
+        font-size: 14px;
+        line-height: 18px;
+        width: 270px;
+        float: left;
+        text-transform: none;
+        &__place_left {
+            margin:0 0 0 65px;
+        }
+        &__place_center {
+            margin: 50px 0 0 70px;
+            width: 220px;
+        }
+        &__place_right {
+            margin: 65px 0 0 60px;
+        }
+        &__type_congVanguard {
+            margin: 20px 0 0 45px;
+            width: 220px;
+        }
+        &__type_congWeapon {
+            margin: -20px 0 0 90px;
+        }
+    }
+    &__addictHeader {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+    &__fractionHeader {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin: 0;
+    }
+    &__image {
+        &__type_scythe {
+            margin-left: -110px;
+        }
+        &__type_congWeapon {
+            margin-left: -150px;
+        }
+    }
+    &__fractionDescWrap {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        padding-top: 30px;
+    }
+    &__fractionDesc {
+        width: 600px;
+        display: inline-block;
+        text-align: left;
+        position: relative;
+    }
+    &__fractionContent {
+        width: 280px;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: none;
+
+        &__side_left {
+            float:left;
+        }
+        &__side_right {
+            float: right;
+
+        }
+    }
+    &__blockGlow {
+        width: 140%;
+        height: 140%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        opacity: 0.7;
+        z-index: 0;
+    }
+    &__topContentText {
+        position: relative;
+        z-index: 1;
+    }
+    &__fractionImage {
+        position: absolute;
+        left: -145px;
+        top: 55px;
+
+        &__name_terran {
+            top: 20px;
+        }
+    }
+}

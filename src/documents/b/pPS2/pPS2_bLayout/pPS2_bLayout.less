@@ -1,0 +1,190 @@
+.reset() {
+	margin: 0;
+	padding: 0;
+}
+
+.ps2_transition(@prop, @time: 0.3s) {
+	-webkit-transition: @prop @time ease;
+	-moz-transition: @prop @time ease;
+	-ms-transition: @prop @time ease;
+	-o-transition: @prop @time ease;
+	transition: @prop @time ease;
+}
+.pPS2_bBody {
+	margin: 0;
+	height: 100%;
+	overflow: visible;
+}
+.pPS2_bLayout {
+	display: table;
+	width: 100%;
+	height: 100%;
+	min-width: 1000px;
+	overflow: hidden;
+	padding-bottom: 0;
+	background: black;
+	color: white;
+	font: normal 16px/20px "Geogrotesque", Tahoma, sans-serif;
+	text-transform: uppercase;
+	padding-top: @userbar-height;
+
+	&__eTableRow {
+		display: table-row;
+	}
+
+	&__eContent {
+		display: table-cell;
+		padding-bottom: 80px;
+	}
+
+	&_type_cbt {
+		background: black url('/b/pPS2/pPS2_bLayout/pagebg_cbt.jpg') center 30px no-repeat;
+	}
+
+
+	// Heading
+	&__eHeader {
+		position: relative;
+		padding: 50px 0 200px 0;
+		text-align: center;
+		font-weight: normal;
+	}
+
+	&__eHGroup {
+		.reset();
+	}
+
+	&__eHeaderCaption {
+		.reset();
+		position: relative;
+		right: -10px;
+		overflow: hidden;
+		width: 474px;
+		height: 91px;
+		margin: 0 auto 10px auto;
+		background: url('/b/pPS2/pPS2_bLayout/ps_logo.png') no-repeat;
+		text-indent: -9999px;
+	}
+
+	&__eHeaderSoon {
+		.reset();
+		margin-bottom: 10px;
+		font-size: 36px;
+		line-height: 40px;
+		font-weight: normal;
+	}
+
+	&__eHeaderDesc {
+		.reset();
+		text-transform: none;
+	}
+
+	&__eCBTHeader {
+		font-size: 24px;
+		margin: 0 0 10px 0;
+		padding: 0;
+		font-weight: normal;
+		line-height: 32px;
+	}
+
+	&__eCBTDesc {
+		position: absolute;
+		bottom: 10px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		text-transform: none;
+	}
+
+	// Trailer movie
+	&__eTrailer {
+		width: 321px;
+		margin: 0 auto;
+	}
+
+	&__eTrailerLink {
+		position: relative;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 315px;
+		height: 37px;
+		padding-top: 18px;
+		color: white;
+		background: url('/b/pPS2/pPS2_bLayout/btn_trailer.png') no-repeat center 0;
+
+		font-size: 18px;
+		line-height: 21px;
+		text-decoration: none;
+		text-align: center;
+
+		&:hover {
+			color: white;
+		}
+		&:active {
+		  top: 1px;
+		}
+	}
+
+	&__eTrailerLinkGlow {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 315px;
+		height: 55px;
+		background: url('/b/pPS2/pPS2_bLayout/btn_trailer.png') no-repeat center -56px;
+		opacity: 0;
+		.ps2_transition(opacity);
+
+		.pPS2_bLayout__eTrailerLink:hover & {
+			opacity: 1;
+		}
+	}
+
+	// VK widget
+	&__eSubscribe {
+		margin: 0 auto;
+		width: 282px;
+	}
+
+	&__eSubscribeCaption {
+		.reset();
+		margin-bottom: 7px;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: normal;
+		text-align: center;
+	}
+
+	&__eSubscribeWidget {
+		opacity: 0.4;
+		.ps2_transition(opacity);
+
+		.pPS2_bLayout__eSubscribe:hover &,
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	// Footer
+	.bFooter {
+		position: relative;
+		color: white;
+		text-transform: none;
+
+		.bPageFooterCopyright__eSupportLink,
+		.bPageFooterList__eHeaderText,
+		.bPageFooterList__eContent a,
+		.bPageFooterLang__ePopupShowLink {
+			color: #1de1f7;
+			.ps2_transition(color, 0.1s);
+
+			&:hover {
+				color: white;
+			}
+		}
+	}
+	.bPageFooter {
+		border-top: none;
+	}
+}

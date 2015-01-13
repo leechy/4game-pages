@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" data-4game-ignore="true" />
+		<title><%=@document.title%></title>
+		<link href="/img/planetside2.ico" rel="shortcut icon" type="image/ico"/>
+
+		<script type="text/javascript" src="/js/imgsupport.js" data-4game-ignore="true"></script>
+		<script type="text/javascript" src="/js/jquery-1.10.0.min.js" data-4game-ignore="true"></script>
+
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css" data-4game-ignore="true" />
+		<link href="/b/pPS2/blocks.css" rel="stylesheet" type="text/css" data-4game-ignore="true" />
+	</head>
+	<body class="pPS2_bBody">
+        <section id="GlobalContent" class="bGlobalLayout__eGlobalContent" data-target="GlobalContent">
+            <%- @content %>
+        </section>
+		<script type="text/javascript" src="/js/planetside2.js"></script>
+	</body>
+</html>
