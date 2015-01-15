@@ -1,0 +1,1201 @@
+@path: "/b/pPS2/pPS2_pages/i/";
+@interfacePath: "/b/pPS2/pPS2_pages/i/interface";
+
+img {
+    border:none;
+}
+
+.pPS2_internal {
+    position: relative;
+    z-index: 7;
+    width: 1000px;
+    opacity: 0;
+    .transition(opacity 0.3s 0.8s ease-in);
+    pointer-events: none;
+    
+    &_state_visible {
+        opacity: 1;
+    }
+}
+
+.pPS2_insidePage {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0 0;
+    color:#fff;
+    pointer-events: initial;
+
+    /* 4th scene should be transparent to pass clicks to menu */
+    &[data-scene="4"] {
+	    pointer-events: none;
+    }
+
+    &__menu {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        text-align: center;
+        top:20px;
+        z-index: 5;
+    }
+    &__menuWrap {
+        display: inline-block;
+        margin-left: -55px;
+
+    }
+    &__menuLink {
+        display: block;
+        float:left;
+        padding: 0 0 25px;
+        margin: 0 5px 0 0;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        background-position: -70px 0;
+        background-repeat: no-repeat;
+
+        &__type_prowler {
+            background-image: url(~'@{interfacePath}/prowler.png');
+        }
+        &__type_lighting {
+            background-image: url(~'@{interfacePath}/lighting.png');
+        }
+        &__type_sunderer {
+            background-image: url(~'@{interfacePath}/sunderer.png');
+        }
+        &__type_galaxy {
+            background-image: url(~'@{interfacePath}/galaxy.png');
+        }
+        &__type_liberator {
+            background-image: url(~'@{interfacePath}/liberator.png');
+        }
+        &__type_reaver {
+            background-image: url(~'@{interfacePath}/reaver.png');
+        }
+        &__type_scythe {
+            background-image: url(~'@{interfacePath}/scythe.png');
+        }
+        &__type_vanguard {
+            background-image: url(~'@{interfacePath}/vanguard.png');
+        }
+        &__type_mosquito {
+            background-image: url(~'@{interfacePath}/mosquito.png');
+        }
+        &__type_magrider {
+            background-image: url(~'@{interfacePath}/magrider.png');
+        }
+        &__type_flash {
+            background-image: url(~'@{interfacePath}/flash.png');
+        }
+        &__type_harasser {
+            background-image: url(~'@{interfacePath}/harasser.png');
+        }
+        &__type_medic {
+            background-image: url(~'@{interfacePath}/medic.png');
+        }
+        &__type_light-assault {
+            background-image: url(~'@{interfacePath}/lightassault.png');
+        }
+        &__type_heavy-assault {
+            background-image: url(~'@{interfacePath}/heavyassault.png');
+        }
+        &__type_engineer {
+            background-image: url(~'@{interfacePath}/engineer.png');
+        }
+        &__type_max {
+            background-image: url(~'@{interfacePath}/max.png');
+        }
+        &__type_infiltrator {
+            background-image: url(~'@{interfacePath}/infiltrator.png');
+        }
+
+        &:hover &Text {
+            opacity: 1;
+            z-index: 3;
+        }
+        &:hover {
+            background-position: -35px 0;
+        }
+        &__mState_active {
+            background-position: 0 0;
+
+            &:hover {
+                background-position: 0 0;
+                & .pPS2_insidePage__menuLinkText {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &__menuLinkText {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        .transform("translate(-50%,0)");
+        opacity: 0;
+        font-size:14px;
+        color:#1de1f7;
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+    &__backlink {
+        position: relative;
+        z-index: 3;
+        display: block;
+        margin: 0 0 0 10px;
+        overflow: hidden;
+        color:#1de1f7;
+        pointer-events: initial;
+        width: 240px;
+        &:hover {
+            color: #aff3fb;
+        }
+    }
+    &__backlinkIcon {
+        float:left;
+        width: 47px;
+        height: 45px;
+        background:url(~'@{interfacePath}/backIcon.png') no-repeat 0 0;
+    }
+    &__backlinkText {
+        float:left;
+        font-size: 16px;
+        margin: 12px 0 0;
+        text-decoration: underline;
+    }
+    &__primaryText {
+        position: relative;
+        z-index: 3;
+    }
+
+
+    &__primaryDescription {
+        position: absolute;
+        top: 80px;
+        left: 55px;
+        width: 320px;
+        text-transform: none;
+        font-size: 18px;
+        line-height: 22px;
+        //text-shadow:0 0 10px #000,0 0 10px #000;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 150%;
+            height: 190%;
+            top: -45%;
+            left: -25%;
+            margin: 0 0 0 -20px;
+            .textBackgroundBlack();
+        }
+    }
+
+    &__primaryHeader {
+        font-size: 36px;
+        line-height: 40px;
+        margin: 4px 0;
+        font-weight: normal;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 3;
+    }
+    &__subHeader {
+        margin: 4px 0 8px;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        position: relative;
+        z-index: 3;
+    }
+    &__subLink {
+        text-transform: none;
+        text-decoration: underline;
+        color:#1de1f7;
+        &:hover {
+            color: #aff3fb;
+        }
+    }
+    &__additionalText {
+        position: relative;
+        z-index: 3;
+    }
+
+    // ------- info layer animation --------
+    .pPS2_internal &__primaryDescription,
+    .pPS2_internal &__additionalDescription {
+        opacity: 0;
+    }
+    
+    .pPS2_internal_state_visible &__primaryDescription {
+        opacity: 1;
+        .transition(opacity 0.3s ease-in 0.25s);
+    }
+
+    .pPS2_internal_state_visible &__additionalDescription {
+        opacity: 1;
+        .transition(opacity 0.3s ease-in 0.5s);
+    }
+    // -------------------------------------
+
+
+
+    &__additionalDescription {
+        text-transform: none;
+        width: 230px;
+        font-size: 14px;
+        line-height: 18px;
+        //text-shadow:0 0 10px #000,0 0 10px #000;
+        position: absolute;
+
+        &__glow_black {
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: 150%;
+                height: 190%;
+                top: -45%;
+                left: -25%;
+                margin: 0 0 0 -20px;
+                .textBackgroundBlack();
+            }
+        }
+        &__glow_blue {
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: 150%;
+                height: 190%;
+                top: -45%;
+                left: -25%;
+                margin: 0 0 0 -20px;
+                .textBackgroundBlue();
+            }
+        }
+
+        &__type_engineerTurret {
+            top: 160px;
+            left: 420px;
+            width: 365px;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -78px;
+                left: 7px;
+                width: 145px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(77deg)");
+            }
+        }
+        &__type_engineerSoltice {
+            right: 51px;
+            top: 470px;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 72px;
+                left: -51px;
+                width: 59px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-54deg)");
+            }
+        }
+        &__type_engineerMines {
+            left: 50px;
+            top: 700px;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -60px;
+                left: 42px;
+                width: 100px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(90deg)");
+            }
+            
+            .pPS2_insidePage__mineImg {
+                position: absolute;
+                left: 10px;
+                bottom: -160px;
+            }
+
+        }
+        &__type_engineerRepair {
+            right: 180px;
+            top: 700px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -43px;
+                left: -42px;
+                width: 120px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(45deg)");
+            }
+        }
+        &__type_flashDevice {
+            position: absolute;
+            top: 360px;
+            left: 80px;
+            width: 210px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 117px;
+                left: 201px;
+                height: 159px;
+                border-left:1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-25deg)");
+            }
+        }
+        &__type_flashCobalt {
+            position: absolute;
+            top: 330px;
+            right: 15px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 80px;
+                left: -35px;
+                height: 100px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(35deg)");
+            }
+        }
+        &__type_galaxyRanger {
+            top: 338px;
+            right:230px;
+            width: 230px;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 65px;
+                border-left:1px solid #fff;
+                top: 89px;
+                left: 9px;
+                .opacity(0.5);
+                .transform("rotate(21deg)");
+            }
+        }
+        &__type_galaxyDrake {
+            top: 820px;
+            left: 280px;
+            width: 230px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 48px;
+                border-top: 1px solid #fff;
+                top: -19px;
+                left: 43px;
+                .opacity(0.5);
+                .transform("rotate(90deg)");
+            }
+        }
+        &__type_galaxyBuldog {
+            top: 720px;
+            width: 230px;
+            right: -24px;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 80px;
+                border-left:1px solid #fff;
+                top: -77px;
+                right: 135px;
+                .opacity(0.5);
+            }
+        }
+        &__type_heavyassaultShield {
+            top: 160px;
+            left: 420px;
+        }
+        &__type_heavyassaultSaw {
+            top: 320px;
+            left: 130px;
+            &::before {
+                content: "";
+                position: absolute;
+                right: -95px;
+                top: 124px;
+                width: 131px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(23deg)");
+            }
+        }
+        &__type_heavyassaultShrike {
+            top: 334px;
+            right: 80px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -80px;
+                top: 60px;
+                width: 70px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-25deg)");
+            }
+        }
+        &__type_heavyassaultGrenade {
+            top: 587px;
+            left: 138px;
+            &::before {
+                content: "";
+                position: absolute;
+                right: -77px;
+                top: 28px;
+                width: 117px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-16deg)");
+            }
+        }
+        &__type_infiltratorCloaking {
+            left: 430px;
+            top: 100px;
+            width: 250px;
+        }
+        &__type_infiltratorVa39 {
+            top: 288px;
+            right: 90px;
+            width: 270px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 65px;
+                left: -80px;
+                width: 78px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-30deg)");
+            }
+        }
+        &__type_infiltratorRecon {
+            top: 535px;
+            left: 172px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 3px;
+                right: -90px;
+                width: 155px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-11deg)");
+            }
+        }
+        &__type_infiltratorMine {
+            top: 720px;
+            left: 130px;
+            width: 265px;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 104px;
+                left: 90px;
+                height: 60px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+            }
+            
+            .pPS2_insidePage__mineImg {
+                position: absolute;
+                left: 10px;
+                bottom: -130px;
+            }
+        }
+        &__type_infiltratorHacking {
+            right: 60px;
+            top: 493px;
+            width: 260px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -15px;
+                left: -100px;
+                width: 102px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(31deg)");
+            }
+        }
+        &__type_liberatorDalton {
+            top: 545px;
+            left: 555px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -64px;
+                left: 87px;
+                height: 65px;
+                border-left:1px solid #fff;
+                .opacity(0.5);
+            }
+        }
+        &__type_liberatorBuldog {
+            top: 425px;
+            right: 10px;
+            width: 200px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -95px;
+                left: 85px;
+                height: 92px;
+                border-left:1px solid #fff;
+                .opacity(0.5);
+            }
+        }
+        &__type_liberatorShredder {
+            top: 684px;
+            left: 58px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -50px;
+                left: 60px;
+                height: 50px;
+                border-left:1px solid #fff;
+                .opacity(0.5);
+            }   
+        }
+        &__type_lightassaultCycler {
+            left: 72px;
+            top: 346px;
+            &::before {
+                content: "";
+                position: absolute;
+                right: -93px;
+                top: -5px;
+                width: 120px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-45deg)");
+            }
+        }
+        &__type_lightassaultJump {
+            top: 320px;
+            right: 50px;
+            width: 200px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -80px;
+                top: 10px;
+                width: 80px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(35deg)");
+            }
+        }
+        &__type_lightassaultBomb {
+            top: 520px;
+            right: 140px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -108px;
+                top: -60px;
+                width: 134px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(62deg)");
+            }
+        }
+        &__type_lightingSkyguard {
+            position: absolute;
+            width: 220px;
+            top:355px;
+            right: 354px;
+            &::before {
+                content: "";
+                width: 68px;
+                border-top: 1px solid #fff;
+                position: absolute;
+                top: 136px;
+                left: -18px;
+                .opacity(0.5);
+                .transform("rotate(-72deg)");
+            }
+        }
+        &__type_lighting120mm {
+            position:absolute;
+            width: 240px;
+            top: 356px;
+            right: 125px;
+            ::before {
+                content: "";
+                height: 47px;
+                border-left:1px solid #fff;
+                position: absolute;
+                top:30px;
+                left:-35px;
+                .opacity(0.5);
+            }
+        }
+        &__type_magriderMagboost {
+            top: 150px;
+            left: 500px;
+            width: 255px;
+        }
+        &__type_magriderSaron {
+            top: 370px;
+            left: 160px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 75px;
+                left: 102px;
+                height: 67px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+            }
+        }
+        &__type_magriderSupernova {
+            top: 320px;
+            right: 100px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 164px;
+                left: 20px;
+                height: 100px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(15deg)");
+            }
+        }
+        &__type_maxCharge {
+            top: 100px;
+            left: 600px;
+        }
+        &__type_maxPounder {
+            top: 560px;
+            left: 100px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -10px;
+                right: 10px;
+                width: 100px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-45deg)");
+            }
+        }
+        &__type_maxScattercannon {
+            top: 611px;
+            right: 55px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -50px;
+                left: -36px;
+                width: 100px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(77deg)");
+            }
+        }
+        &__type_medicRegen {
+            top: 235px;
+            left: 55px;
+            width: 280px;
+        }
+        &__type_medicApplicator {
+            left: 185px;
+            top: 361px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 107px;
+                right: -4px;
+                top: 120px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(32deg)");
+            }
+        }
+        &__type_medicCycler {
+            top: 127px;
+            right: 208px;
+            width: 315px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 70px;
+                left: 77px;
+                top: 145px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(90deg)");
+            }
+        }
+        &__type_medicNanite {
+            top: 423px;
+            right: 57px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 105px;
+                left: -110px;
+                top: 91px;
+                border-top: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-28deg)");
+            }
+        }
+        &__type_mosquitoTomcat {
+            left: 441px;
+            top: 691px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -69px;
+                left: 45px;
+                height: 75px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+            }
+        }
+        &__type_mosquitoNeedler {
+            top: 660px;
+            left: 194px;
+            width: 200px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -75px;
+                left: 66px;
+                height: 79px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+            }
+        }
+        &__type_prowlerAbility {
+            position: absolute;
+            top: 150px;
+            left: 485px;
+            width: 255px;
+        }
+        &__type_prowlerVulcan {
+            position: absolute;
+            right: 82px;
+            top: 313px;
+            width: 230px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: #fff;
+                width: 82px;
+                height: 1px;
+                .transform("rotate(-34deg)");
+                .opacity(0.5);
+                left: -80px;
+                top: 121px;
+            }
+        }
+        &__type_prowlerDual90 {
+            position: absolute;
+            left: 100px;
+            top: 450px;
+            width: 230px;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 83px;
+                left: 199px;
+                width: 120px;
+                height: 1px;
+                background: #fff;
+                .opacity(0.5);
+                .transform("rotate(-17deg)");
+            }
+        }
+        &__type_reaverBreaker {
+            top: 600px;
+            left: 400px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -121px;
+                left: 29px;
+                height: 124px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+            }
+        }
+        &__type_reaverMustang {
+            top: 460px;
+            right: 28px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -40px;
+                left: -26px;
+                height: 53px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(-45deg)");
+            }
+        }
+        &__type_scytheSaron {
+            left: 203px;
+            top: 517px;
+            &::before {
+                content: "";
+                width: 62px;
+                border-top: 1px solid #fff;
+                position: absolute;
+                left: 150px;
+                top: -18px;
+                .opacity(0.5);
+                .transform("rotate(-44deg)");
+            }
+        }
+        &__type_scythePhoton {
+            top: 575px;
+            left: 540px;
+            &::before {
+                content: "";
+                height: 80px;
+                border-left: 1px solid #fff;
+                position: absolute;
+                top: -80px;
+                left: 52px;
+                .opacity(0.5);
+            }
+        }
+        &__type_sundererRanger {
+            top: 274px;
+            left: 304px;
+            width: 230px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 70px;
+                left: 90px;
+                height: 40px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+            }
+        }
+        &__type_sundererBuldog {
+            top: 276px;
+            right: 184px;
+            width: 270px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 125px;
+                left: 90px;
+                height: 60px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+            }
+        }
+        &__type_sundererStation {
+            top: 740px;
+            left: 100px;
+        }
+        &__type_sundererAmmo {
+            top: 630px;
+            right: 10px;
+            width: 180px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -43px;
+                left: -48px;
+                height: 82px;
+                border-left: 1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(107deg)");
+            }
+        }
+        &__type_vanguardShield {
+            left: 480px;
+            top: 125px;
+            width: 250px;
+        }
+        &__type_vanguardEnforcer {
+            left: 125px;
+            top: 360px;
+            &::before {
+                content:"";
+                position: absolute;
+                top: 113px;
+                left: 160px;
+                width: 52px;
+                border-top:1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(60deg)");
+            }
+        }
+        &__type_vanguardTitan {
+            top: 485px;
+            right: 80px;
+            width: 300px;
+            &::before {
+                content:"";
+                position: absolute;
+                top: -14px;
+                left: -86px;
+                width: 83px;
+                border-top:1px solid #fff;
+                .opacity(0.5);
+                .transform("rotate(38deg)");
+            }
+        }
+        &__type_harasserAbility {
+            right: 257px;
+            top: 125px;
+            width: 300px;
+        }
+        &__type_harasserWalker {
+            left: 70px;
+            top: 360px;
+        }
+    }
+    &__additionalHeader {
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin: 4px 0 8px;
+        position: relative;
+        z-index: 3;
+    }
+    &__arrow {
+        width: 52px;
+        height: 202px;
+        background:url(~'@{interfacePath}/arrows.png') no-repeat 0 -202px;
+        position: absolute;
+        top: 380px;
+        left: 0;
+        z-index: 5;
+        &:hover {
+            background-position: -52px -202px;
+        }
+        &__place_right {
+            left: auto;
+            right: 0;
+            background-position: 0 0;
+
+            &:hover {
+                background-position: -52px 0;
+            }
+        }
+    }
+    &__primaryDescription__type_lighting {
+        width: 270px;
+    }
+    &__primaryDescription__type_prowler {
+        width: 320px;
+    }
+    &__background__name_engineer {
+        position: absolute;
+        top: 150px;
+        left: -270px;
+    }
+    &__background__name_flash {
+        position: absolute;
+        top: 250px;
+        left: 150px;
+    }
+    &__background__name_galaxy {
+        position: absolute;
+        top: 150px;
+        left: 70px;
+    }
+    &__background__name_heavyassault {
+        position: absolute;
+        top: 250px;
+        left: 340px;
+    }
+    &__background__name_infiltrator {
+        position: absolute;
+        top: 280px;
+        left: 130px;
+    }
+    &__background__name_liberator {
+        left: -121px;
+        position: absolute;
+        top: 232px;
+    }
+    &__background__name_lightassault {
+        position: absolute;
+        top: 150px;
+        left: 100px;
+    }
+    &__background__name_lighting {
+        position: absolute;
+        left: -50px;
+        top: 270px;
+    }
+    &__background__name_magrider {
+        position: absolute;
+        top: 400px;
+        left: -107px;
+    }
+    &__background__name_max {
+        position: absolute;
+        top: 190px;
+        left: 180px;
+    }
+    &__background__name_medic {
+        position: absolute;
+        top: 217px;
+        left: -140px;
+    }
+    &__background__name_mosquito {
+        position: absolute;
+        top: 83px;
+        left: 126px;
+    }
+    &__background__name_prowler {
+        position: absolute;
+        top: 210px;
+        left: -35px;
+    }
+    &__background__name_reaver {
+        position: absolute;
+        left: 0px;
+        top: 285px;
+    }
+    &__background__name_scythe {
+        position: absolute;
+        top: 175px;
+        left: 180px;
+    }
+    &__background__name_sunderer {
+        position: absolute;
+        top: 380px;
+        left: 90px;
+    }
+    &__background__name_vanguard {
+        position: absolute;
+        top: 160px;
+        left: 80px;
+    }
+    &__background__name_harasser {
+        position: absolute;
+        top: -63px;
+        left: 60px;
+    }
+    
+    &__abilitySwitcher {
+        cursor: pointer;
+        color: #1DE1F7;
+        
+        span {
+            border-bottom: 1px dashed #1DE1F7;
+        }
+        
+        &:hover {
+            color: #AFF3FB;
+            
+            span {
+                border-bottom: none;
+            }
+        }
+    }
+    
+    &__abilityTabSwitcher {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    &__state_on {
+        .pPS2_insidePage__withoutAbility {
+            opacity: 0;
+            .transition(opacity @animationSpeedAbility linear @animationSpeedAbility/2);
+        }
+        
+        .pPS2_insidePage__withAbility {
+            opacity: 1;
+            .transition(opacity @animationSpeedAbility linear);
+            
+        }
+        
+        .pPS2_insidePage__abilityTitleOn, pPS2_insidePage__abilityTextOn {
+            display: none;
+        }
+        
+        .pPS2_insidePage__abilityTitleOff, pPS2_insidePage__abilityTextOff {
+            display: inline;
+        }
+    }
+    
+    &__withAbility {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        .transition(opacity @animationSpeedAbility linear @animationSpeedAbility/2);
+    }
+    
+    &__withoutAbility {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        .transition(opacity @animationSpeedAbility linear);
+    }
+    
+    &__abilityTitleTab{
+        cursor: pointer;
+        color: #1DE1F7;
+        
+        span {
+            border-bottom: 1px dashed #1DE1F7;
+        }
+        
+        &:hover {
+            color: #AFF3FB;
+            span {
+                border-color: #AFF3FB;
+            }
+        }
+        
+        &__state_active {
+            color: #fff;
+            cursor: default;
+            
+            span {
+                border: none;
+            }
+            
+            &:hover {
+                color: #fff;
+            }
+        }
+        
+        &:first-child {
+            float: left;
+            margin-right: 15px;
+        }
+    }
+    
+    &__abilityTextTab {
+        display: none;
+        
+        &__state_active {
+            display: inline;
+        }
+    }
+}

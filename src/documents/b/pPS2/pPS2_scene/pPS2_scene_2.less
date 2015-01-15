@@ -1,0 +1,718 @@
+.pPS2_scene {
+
+    /* Объекты второй сцены */
+    &__ground2 {
+        width: 1965px;
+        height: 383px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene1/ground.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene1/ground.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene1/ground.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene1/ground.webp');
+        }
+        .transition(all @animationSpeedGround linear);
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+//            .transforms(translate(-510px, 1200px) scale(3));
+            .transforms(scale(3));
+            top: 1200px;
+            left: -510px;
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+//            .transforms(translate(-510px, 650px));
+            .transforms(scale(1));
+            top: 650px;
+            left: -510px;
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+//            .transforms(translate(-510px, 525px) scaleY(0.5) scaleX(0.7));
+            .transforms(scaleY(0.5) scaleX(0.7));
+            top: 525px;
+            left: -510px;
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+//            .transforms(translate(-510px, 2600px) scale(0.15));
+            .transforms(scaleY(0.15));
+            top: 5600px;
+            left: -510px;
+        }
+
+        .pPS2_scene_internal_22 & {
+//            .transforms(translate(-510px, 650px + @pPS2_sky-scene-Yoffset));
+            .transforms(scaleY(1));
+            top: 650px + @pPS2_sky-scene-Yoffset;
+            left: -510px;
+        }
+        .pPS2_scene_internal_32 & {
+//            .transforms(translate(-510px, 525px + @pPS2_sky-scene-Yoffset) scaleY(0.5) scaleX(0.7));
+            .transforms(scaleY(0.5) scaleX(0.7));
+            top: 525px + @pPS2_sky-scene-Yoffset;
+            left: -510px;
+        }
+    }
+
+    &__light-assault {
+        width: 409px;
+        height: 363px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/light-assault.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/light-assault.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/light-assault.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/light-assault.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background:url('/b/pPS2/pPS2_scene/i/scene2/light-assault-stroke.png') no-repeat !important;
+            .transforms(translate(470px, 75px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(1970px, -1620px) scale(8));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+            .transforms(translate(470px, 75px) scale(1));
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(270px, 444px) scale(0.14));
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(0px, 2000px) scale(0.01));
+            .transition(all @animationSpeed * @animationAcceleration linear);
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_22 & {
+            .transforms(translate(470px, 75px+ @pPS2_sky-scene-Yoffset) scale(1));
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(270px, 444px + @pPS2_sky-scene-Yoffset) scale(0.14));
+        }
+    }
+
+    &__max {
+        width: 793px;
+        height: 746px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/max.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/max.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/max.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/max.webp');
+        }
+
+        &_type_hover {
+            background:url('/b/pPS2/pPS2_scene/i/scene2/max-stroke.png') no-repeat !important;
+            .transforms(translate(-210px, 330px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(-3000px, 1500px) scale(8));
+            .transition(all @animationSpeed * 0.5 linear);
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+            .transforms(translate(-210px, 330px) scale(1));
+            .transition(all @animationSpeed @animationSpeed * 0.01 linear);
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(40px, 300px) scale(0.13));
+            .transition(all @animationSpeed @animationSpeed * 0.01 linear);
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(0px, 2000px) scale(0.01));
+            .transition(all @animationSpeed linear);
+
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_22 & {
+            .transforms(translate(-210px, 330px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(40px, 300px + @pPS2_sky-scene-Yoffset) scale(0.13));
+        }
+
+        .transition(all @animationSpeed ease-out);
+
+    }
+
+    &__heavy {
+        width: 211px;
+        height: 400px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/heavy-assault.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/heavy-assault.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/heavy-assault.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/heavy-assault.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background:url('/b/pPS2/pPS2_scene/i/scene2/heavy-assault-stroke.png') no-repeat !important;
+            .transforms(translate(195px, 506px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(-2000px, 1500px) scale(7));
+            .transition(all @animationSpeed * 0.8 @animationSpeed * 0.04 linear);
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+            .transforms(translate(195px, 506px) scale(1));
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(304px, 460px) scale(0.15));
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(0px, 2000px) scale(0.01));
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_22 & {
+            .transforms(translate(195px, 506px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(304px, 460px + @pPS2_sky-scene-Yoffset) scale(0.15));
+        }
+    }
+
+    &__medic {
+        width: 368px;
+        height: 250px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/medic.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/medic.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/medic.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/medic.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background:url('/b/pPS2/pPS2_scene/i/scene2/medic-stroke.png') no-repeat !important;
+            .transforms(translate(239px, 584px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(-1100px, 1500px) scale(10));
+            .transition(all @animationSpeed * 0.8 @animationSpeed * 0.08 linear);
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+            .transforms(translate(239px, 584px) scale(1));
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(250px, 525px) scale(0.2));
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(0px, 2000px) scale(0.01));
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_22 & {
+            .transforms(translate(239px, 584px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(250px, 525px + @pPS2_sky-scene-Yoffset) scale(0.2));
+        }
+    }
+
+    &__infiltrator {
+        width: 214px;
+        height: 263px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/infiltrator.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/infiltrator.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/infiltrator.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/infiltrator.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background:url('/b/pPS2/pPS2_scene/i/scene2/infiltrator-stroke.png') no-repeat !important;
+            .transforms(translate(570px, 577px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(1100px, 1500px) scale(10));
+            .transition(all @animationSpeed * 0.8 @animationSpeed * 0.08 linear);
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+            .transforms(translate(570px, 560px) scale(1));
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(370px, 520px) scale(0.2));
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(0px, 2000px) scale(0.01));
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_22 & {
+            .transforms(translate(570px, 560px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(370px, 520px + @pPS2_sky-scene-Yoffset) scale(0.2));
+        }
+    }
+
+    &__engineer {
+        width: 452px;
+        height: 414px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/engineer.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/engineer.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/engineer.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene2/engineer.webp');
+        }
+        .transition(all @animationSpeed ease-out);
+
+        &_type_hover {
+            background:url('/b/pPS2/pPS2_scene/i/scene2/engineer-stroke.png') no-repeat !important;
+            .transforms(translate(584px, 526px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(2000px, 1500px) scale(8));
+            .transition(all @animationSpeed * 0.8 linear);
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+            .transforms(translate(584px, 526px) scale(1));
+            .transition(all @animationSpeed @animationSpeed * 0.01 linear);
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(250px, 460px) scale(0.2));
+            .transition(all @animationSpeed @animationSpeed * 0.01 linear);
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(0px, 2000px) scale(0.01));
+            .transition(all @animationSpeed linear);
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_22 & {
+            .transforms(translate(584px, 526px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(250px, 460px + @pPS2_sky-scene-Yoffset) scale(0.2));
+        }
+    }
+
+    /* Инфо-слой второй сцены */
+    &__classes-info1 {
+        z-index: 1;
+        .transition(all @animationSpeed linear);
+        font: bold 63px/45px 'Geogrotesque', Tahoma, sans-serif;
+        color: white;
+        text-transform: uppercase;
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(rotate(-11deg) translate(2318px, 126px) scale(5));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+            .transforms(rotate(-11deg) translate(210px, 100px) scale(1));
+        }
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(rotate(-11deg) translate(2318px, 126px) scale(0.01));
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        &-small {
+            font: bold 36px/42px 'Geogrotesque', Tahoma, sans-serif;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+
+    &__classes-info1sub {
+        z-index: 1;
+        .transition(all @animationSpeed linear);
+        font: bold 36px/42px 'Geogrotesque', Tahoma, sans-serif;
+        color: white;
+        text-transform: uppercase;
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(rotate(-11deg) translate(-1500px, 526px) scale(5));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+            .transforms(rotate(-11deg) translate(216px, 166px) scale(1));
+        }
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(rotate(-11deg) translate(2318px, 126px) scale(0.01));
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    &__classes-info2 {
+        width: 250px;
+        z-index: 1;
+        .transforms(translate(500px, 253px));
+        .transition(all @animationSpeedInfo linear);
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 150%;
+            height: 190%;
+            top: -45%;
+            left: -25%;
+            margin: 0 0 0 -20px;
+            .textBackgroundBlue();
+        }
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        &-text {
+            margin: 0 0 15px;
+            font: 18px/20px 'Geogrotesque', Tahoma, sans-serif;
+            color: white;
+            text-transform: none;
+            position: relative;
+            z-index: 2;
+
+        }
+    }
+
+    &__info-video1 {
+        text-align: center;
+        .transforms(translate(265px, 256px));
+        .transition(all @animationSpeedInfo linear);
+
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: 150%;
+                height: 190%;
+                top: -45%;
+                left: -25%;
+                margin: 0 0 0 -20px;
+                .textBackgroundBlue();
+            }
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            z-index: 1;
+            .opacity(0);
+        }
+        .pPS2_scene_scene_2 & {
+            z-index: 3;
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        .pPS2_scene_internal_21 &,
+        .pPS2_scene_internal_22 &,
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+
+        &-image {
+            position: relative;
+            z-index: 2;
+            width: 192px;
+            height: 100px;
+            margin: 0 auto;
+            background: url("/b/pPS2/pPS2_scene/i/scene2/infantry_sprite.jpg") 0 0 no-repeat;
+            border: 1px solid #1de0f7;
+            //.box-shadow(2px, 2px, 37px, 0.5, 0, 0, 0, 12px);
+
+        }
+
+        &-play-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -18px;
+        }
+
+        &-link {
+            text-decoration: none;
+            text-align: center;
+        }
+        &-text {
+            border-bottom: 1px dashed;
+            color: #1DE1F3;
+            font: 18px/32px 'Geogrotesque', Tahoma, sans-serif;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+            //.text-shadow(1px 1px 3px rgba(0, 0, 0, 0.9));
+        }
+
+        &-link:hover .pPS2_scene__info-video1-image {
+            border-color: #aff3fb;
+            .animation(pPS2_scene__info-video-hover 0.8s steps(1, end) infinite);
+        }
+        &-link:hover .pPS2_scene__info-video1-text {
+            color: #aff3fb;
+        }
+    }
+
+    &__hover-tip {
+        position: absolute;
+        cursor: pointer;
+        z-index: 2;
+
+        &__glow_black {
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: 150%;
+                height: 190%;
+                top: -45%;
+                left: -25%;
+                margin: 0 0 0 -20px;
+                .textBackgroundBlack();
+            }
+        }
+        &__glow_blue {
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: 150%;
+                height: 190%;
+                top: -45%;
+                left: -25%;
+                margin: 0 0 0 -20px;
+                .textBackgroundBlue();
+            }
+        }
+        &_arrow_up {
+            padding-top: 20px;
+            background: url('/b/pPS2/pPS2_scene/i/scene2/hover-desc-up.png') no-repeat 50% 0;
+            position: relative;
+        }
+        &_arrow_down {
+            padding-bottom: 20px;
+            background: url('/b/pPS2/pPS2_scene/i/scene2/hover-desc-down.png') no-repeat 50% 100%;
+            position: relative;
+        }
+
+        &_object_max {
+            left: 250px;
+            top: -125px;
+            width: 190px;
+        }
+        &_object_heavy {
+            left: 0px;
+            top: -100px;
+            width: 220px;
+        }
+        &_object_medic {
+            left: 122px;
+            top: -105px;
+            width: 220px;
+        }
+        &_object_infiltrator {
+            left: 10px;
+            top: -105px;
+            width: 220px;
+        }
+        &_object_light-assault {
+            left: 220px;
+            top: 237px;
+            width: 220px;
+        }
+        &_object_engineer {
+            left: 205px;
+            top: -100px;
+            width: 220px;
+        }
+    }
+    &__hover-title {
+        margin: 0 0 5px 0;
+        text-align: center;
+        font: 24px/24px 'Geogrotesque', Tahoma, sans-serif;
+        text-transform: uppercase;
+        color: #ffffff;
+        //text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+        position: relative;
+        z-index: 2;
+    }
+    &__hover-description {
+        margin: 0 0 5px 0;
+        text-align: center;
+        font: 16px/20px 'Geogrotesque', Tahoma, sans-serif;
+        text-transform: none;
+        color: #ffffff;
+        //text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+        position: relative;
+        z-index: 2;
+    }
+}

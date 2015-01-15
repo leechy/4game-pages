@@ -3,3 +3,5 @@
 
 #node.js packages
 node_modules/
+out/
+.idea/

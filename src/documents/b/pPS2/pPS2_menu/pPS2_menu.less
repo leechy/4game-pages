@@ -1,0 +1,155 @@
+.pPS2_menu {
+	position: absolute;
+	z-index: 5;
+	top: @userbar-height;
+	width: 100%;
+	height: 1px;
+	.opacity(1);
+	.transition(opacity @animationSpeed linear);
+
+	&__mFixed {
+		.pPS2_menu__eFloatingBlock {
+			position: fixed;
+		}
+	}
+
+	&__eFloatingBlock {
+		top: 15px;
+		width: 100%;
+		height: 1px;
+		position: absolute;
+	}
+
+	&_internal_active {
+		.opacity(0);
+	}
+
+	&__bg {
+		position: relative;
+		z-index: 5;
+		float: left;
+		margin-top: 25px;
+		padding: 2px 15px 2px 40px;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 170%;
+			height: 190%;
+			top: -45%;
+			left: -25%;
+			margin: 0 0 0 -20px;
+			.textBackgroundBlack();
+		}
+	}
+	
+	&__bar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 18px;
+		height: 100%;
+		border: 1px solid #00737a;
+		background: rgba(0, 74, 83, 0.4);
+		box-shadow: 0 0 10px #00737a inset;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	&__item {
+		position: relative;
+		z-index: 5;
+		margin: 0;
+		font: 14px/30px 'Geogrotesque', Tahoma, sans-serif;
+		text-transform: uppercase;
+		text-decoration: underline;
+		color: #1de1f3;
+		cursor: pointer;
+		&::before {
+			position: absolute;
+			left: -32px;
+			top: 14px;
+			display: block;
+			width: 9px;
+			height: 1px;
+			content: ' ';
+			font-size: 0px;
+			background-color: #2bdaff;
+		}
+		&:hover {
+			color: #aff3fb;
+		}
+		&_state_active,
+		&_state_active:hover {
+			color: white;
+			text-decoration: none;
+			cursor: default;
+			
+			s {
+				position: absolute;
+				top: 10.5px;
+				left: -29px;
+				width: 0;
+				height: 0;
+				border-color: transparent transparent transparent white;
+				border-width: 4px 0 4px 4px;
+				border-style: solid;
+				&::before {
+					position: absolute;
+					left: -17px;
+					top: -4px;
+					display: block;
+					width: 13px;
+					height: 8px;
+					content: ' ';
+					font-size: 0px;
+					background-color: #ffffff;
+				}
+			}
+		}
+	}
+	 
+	&__plus,
+	&__minus {
+		position: absolute;
+		left: 0;
+		width: 16px;
+		height: 16px;
+
+		background: rgba(0, 74, 83, 0.4);
+		border: 1px solid #00737a;
+		box-shadow: 0 0 12px #00737a inset, 0 0 3px #00737a;
+
+		cursor: pointer;
+		z-index: 2;
+		
+		&::before {
+			position: absolute;
+			top: 7px;
+			left: 2px;
+			width: 12px;
+			height: 2px;
+			background: #ffffff;
+			content: ' ';
+			font-size: 0px;
+		}
+	}
+
+	&__plus {
+		top: -20px;
+		&::after {
+			position: absolute;
+			top: 2px;
+			left: 7px;
+			width: 2px;
+			height: 12px;
+			background: #ffffff;
+			content: ' ';
+			font-size: 0px;
+		}
+	}
+	
+	&__minus {
+		bottom: -20px;
+	}
+}

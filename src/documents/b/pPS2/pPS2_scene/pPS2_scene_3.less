@@ -1,0 +1,920 @@
+.pPS2_scene {
+
+    /* Объекты третьей сцены */
+    &__ground3 {
+        width: 1965px;
+        height: 383px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene1/ground.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene1/ground.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene1/ground.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene1/ground.webp');
+        }
+        .transition(all @animationSpeedGround linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_internal_22 & {
+            .opacity(0);
+//            .transforms(translate(-510px, 1200px) scale(3));
+            .transforms(scale(3));
+            top: 1200px;
+            left: -510px;
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+//            .transforms(translate(-510px, 650px));
+            .transforms(scale(1));
+            top: 650px;
+            left: -510px;
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+//            .transforms(translate(-510px, 2650px));
+            .transforms(scale(1));
+            top: 2650px;
+            left: -510px;
+        }
+
+        .pPS2_scene_internal_32 & {
+//            .transforms(translate(-510px, 650px + @pPS2_sky-scene-Yoffset));
+            .transforms(scale(1));
+            top: 650px + @pPS2_sky-scene-Yoffset;
+            left: -510px;
+        }
+    }
+
+    &__prowler-tank {
+        width: 1053px;
+        height: 633px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/prowler-tank.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/prowler-tank.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/prowler-tank.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/prowler-tank.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/prowler-tank-stroke.png') no-repeat !important;
+            .transforms(translate(-530px,330px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(-3500px, 1000px) scale(8));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(0);
+            .transforms(translate(-3500px, 1000px) scale(8));
+            .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(-540px, 325px) scale(1));
+            .transition-props(0.6);
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(-530px, 2330px) scale(1));
+        }
+
+        .pPS2_scene_internal_31 &, .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_32 & {
+//            .transforms(translate(-540px, 325px + @pPS2_sky-scene-Yoffset) scale(1));
+            .transforms(scale(1));
+            top: 325px + @pPS2_sky-scene-Yoffset;
+            left: -540px;
+        }
+    }
+
+    &__magrider-tank {
+        width: 440px;
+        height: 206px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/magrider-tank.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/magrider-tank.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/magrider-tank.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/magrider-tank.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/magrider-tank-stroke.png') no-repeat !important;
+            .transforms(translate(735px, 615px));
+        }
+
+        .pPS2_scene_scene_1 & {
+          .opacity(0);
+          .transforms(translate(6500px, 3000px) scale(13));
+        }
+
+        .pPS2_scene_scene_2 & {
+          .opacity(0);
+          .transforms(translate(6500px, 3000px) scale(13));
+          .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+          .opacity(1);
+          .transforms(translate(735px, 610px) scale(1));
+          .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(735px, 2615px) scale(1));
+        }
+
+        .pPS2_scene_internal_31 &, .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(735px, 610px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+    }
+
+    &__harasser-tank {
+        width: 580px;
+        height: 447px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/harasser-tank.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/harasser-tank.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/harasser-tank.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/harasser-tank.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/harasser-tank-stroke.png') no-repeat !important;
+            .transforms(translate(735px, 615px));
+        }
+
+        .pPS2_scene_scene_1 & {
+          .opacity(0);
+          .transforms(translate(6500px, 3000px) scale(13));
+        }
+
+        .pPS2_scene_scene_2 & {
+          .opacity(0);
+          .transforms(translate(6500px, 3000px) scale(13));
+          .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+          .opacity(1);
+          .transforms(translate(785px, 490px) scale(1));
+          .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(735px, 2615px) scale(1));
+        }
+
+        .pPS2_scene_internal_31 &, .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(785px, 490px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+    }
+
+    &__lighting-tank {
+        width: 300px;
+        height: 156px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/lightning-tank.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/lightning-tank.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/lightning-tank.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/lightning-tank.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/lightning-tank-stroke.png') no-repeat !important;
+            .transforms(translate(560px, 595px));
+        }
+
+        .pPS2_scene_scene_1 & {
+          .opacity(0);
+          .transforms(translate(3500px, 1200px) scale(10));
+        }
+        .pPS2_scene_scene_2 & {
+          .opacity(0);
+          .transforms(translate(3500px, 1200px) scale(10));
+          .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+          .opacity(1);
+          .transforms(translate(600px, 597px) scale(1));
+          .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(560px, 2595px) scale(1));
+            .transition(all @animationSpeed linear);
+        }
+
+        .pPS2_scene_internal_31 &, .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(600px, 597px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+    }
+
+    &__sunderer-machine {
+        width: 190px;
+        height: 110px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/sunderer-machine.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/sunderer-machine.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/sunderer-machine.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/sunderer-machine.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/sunderer-machine-stroke.png') no-repeat !important;
+            .transforms(translate(155px, 635px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(-1155px, 755px) scale(10));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(0);
+            .transforms(translate(-1155px, 755px) scale(10));
+            .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(115px, 635px) scale(1));
+            .transition-props();
+            .transition(all @animationSpeed * 0.9 linear);
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(155px, 2635px) scale(1));
+        }
+
+        .pPS2_scene_internal_31 &, .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(115px, 635px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+    }
+
+    &__vanguard-tank {
+        width: 285px;
+        height: 100px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/vanguard-tank.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/vanguard-tank.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/vanguard-tank.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/vanguard-tank.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/vanguard-tank-stroke.png') no-repeat !important;
+            .transforms(translate(378px, 670px));
+        }
+
+        .pPS2_scene_scene_1 & {
+          .opacity(0);
+          .transforms(translate(-1378px, 770px) scale(9));
+        }
+        .pPS2_scene_scene_2 & {
+          .opacity(0);
+          .transforms(translate(-1378px, 770px) scale(9));
+          .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+          .opacity(1);
+          .transforms(translate(338px, 670px) scale(1));
+          .transition(all @animationSpeed * 0.9 linear);
+          .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(378px, 2670px) scale(1));
+        }
+
+        .pPS2_scene_internal_31 &, .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(338px, 670px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+    }
+
+    &__flash-motorcicle {
+        width: 234px;
+        height: 210px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/flash-motorcycle.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/flash-motorcycle.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/flash-motorcycle.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/flash-motorcycle.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/flash-motorcycle-stroke.png') no-repeat !important;
+            .transforms(translate(300px, 620px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(-1260px, 690px) scale(9));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(0);
+            .transforms(translate(-1260px, 690px) scale(9));
+            .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(260px, 620px) scale(1));
+            .transition(all @animationSpeed * 0.9 linear);
+            .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(300px, 2620px) scale(1));
+        }
+
+        .pPS2_scene_internal_31 &, .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+        
+        .pPS2_scene_internal_32 & {
+            .transforms(translate(260px, 620px + @pPS2_sky-scene-Yoffset) scale(1));
+        }
+    }
+
+    &__galaxy-ship {
+        width: 196px;
+        height: 152px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/galaxy-ship.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/galaxy-ship.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/galaxy-ship.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/galaxy-ship.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background:url('/b/pPS2/pPS2_scene/i/scene3/galaxy-ship-stroke.png') no-repeat !important;
+            .transforms(translate(620px, 18px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(1300px, -100px) scale(5));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(0);
+            .transforms(translate(1300px, -100px) scale(5));
+            .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(580px, 20px) scale(1));
+            .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(620px, 2018px) scale(1));
+            .transition(all @animationSpeed * @animationAcceleration linear);
+        }
+
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    &__liberator-ship {
+        width: 535px;
+        height: 380px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/liberator-ship.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/liberator-ship.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/liberator-ship.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/liberator-ship.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/liberator-ship-stroke.png') no-repeat !important;
+            .transforms(translate(684px, 125px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(2684px, -225px) scale(3));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(0);
+            .transforms(translate(2684px, -225px) scale(3));
+            .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(640px, 105px) scale(1));
+            .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(684px, 2125px) scale(1));
+            .transition(all @animationSpeed * @animationAcceleration linear);
+        }
+
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    &__mosquito-ship {
+        width: 213px;
+        height: 89px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/mosquito-ship.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/mosquito-ship.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/mosquito-ship.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/mosquito-ship.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/mosquito-ship-stroke.png') no-repeat !important;
+            .transforms(translate(-89px, 290px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(-2089px, 290px) scale(7));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(0);
+            .transforms(translate(-2089px, 290px) scale(7));
+            .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(-89px, 290px) scale(1));
+            .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(-89px, 2290px) scale(1));
+            .transition(all @animationSpeed * @animationAcceleration linear);
+        }
+
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    &__reaver-ship {
+        width: 145px;
+        height: 65px;
+        background-repeat: no-repeat;
+        .notwebp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/reaver-ship.png');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/reaver-ship.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/reaver-ship-stroke.png') no-repeat !important;
+            .transforms(translate(640px, 380px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(2640px, 180px) scale(7));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(0);
+            .transforms(translate(2640px, 180px) scale(7));
+            .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(640px, 380px) scale(1));
+          .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(640px, 2380px) scale(1));
+        }
+
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    &__scythe-ship {
+        width: 581px;
+        height: 296px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/scythe-ship.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/scythe-ship.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/scythe-ship.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene3/scythe-ship.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene3/scythe-ship-stroke.png') no-repeat !important;
+            .transforms(translate(50px, 40px));
+        }
+
+        .pPS2_scene_scene_1 & {
+            .opacity(0);
+            .transforms(translate(-5060px, -500px) scale(3));
+        }
+        .pPS2_scene_scene_2 & {
+            .opacity(0);
+            .transforms(translate(-5060px, -500px) scale(3));
+            .transition-delay();
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(-35px, 0px) scale(1));
+            /*.transition(all @animationSpeed @animationSpeed * 0.11 linear);*/
+            .transition-props();
+        }
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(50px, 2040px) scale(1));
+            .transition(all @animationSpeed * @animationAcceleration linear);
+        }
+
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    /* Инфо-слой третьей сцены */
+    &__tech-info1 {
+        .transition(all @animationSpeed @animationSpeed * 0.01 linear);
+        &-big {
+            font: bold 59px/50px 'Geogrotesque', Tahoma, sans-serif;
+            color: white;
+            text-transform: uppercase;
+        }
+        &-small {
+            font: bold 44px/42px 'Geogrotesque', Tahoma, sans-serif;
+            color: white;
+            text-transform: uppercase;
+        }
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 & {
+            .opacity(0);
+            .transforms(translate(-2280px, 50px) rotate(6deg) scale(5));
+        }
+
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transforms(translate(266px, 109px) rotate(6deg) scale(1));
+            .transition(all @animationSpeed linear);
+        }
+        .pPS2_scene_scene_4 & {
+            .opacity(0);
+            .transforms(translate(-2280px, 50px) rotate(6deg) scale(0.01));
+        }
+
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(-2280px, 50px) rotate(6deg) scale(0.01));
+        }
+
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+    &__tech-info2 {
+        width: 300px;
+        margin: 0px 0px 15px;
+        font: 18px/20px 'Geogrotesque',Tahoma,sans-serif;
+        text-transform: none;
+        color: white;
+        .transforms(translate(440px, 290px));
+        .transition(all @animationSpeedInfo linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+        }
+        .pPS2_scene_scene_3 & {
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+
+        &__glow_black {
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: 150%;
+                height: 190%;
+                top: -45%;
+                left: -25%;
+                margin: 0 0 0 -20px;
+                .textBackgroundBlack();
+            }
+        }
+        &__glow_blue {
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                width: 150%;
+                height: 190%;
+                top: -45%;
+                left: -25%;
+                margin: 0 0 0 -20px;
+                .textBackgroundBlue();
+            }
+        }
+
+        &__text {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &__tech-video {
+        text-align: center;
+        .transforms(translate(227px, 290px));
+        .transition(all @animationSpeedInfo linear);
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 150%;
+            height: 190%;
+            top: -45%;
+            left: -25%;
+            margin: 0 0 0 -20px;
+            .textBackgroundBlue();
+        }
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_4 &,
+        .pPS2_scene_scene_5 & {
+            z-index: 1;
+            .opacity(0);
+        }
+        .pPS2_scene_scene_3 & {
+            z-index: 3;
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        .pPS2_scene_internal_31 &,
+        .pPS2_scene_internal_32 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+    &__tech-videoImage {
+        position: relative;
+        z-index: 2;
+        width: 192px;
+        height: 100px;
+        margin: 0 auto;
+        background: url("/b/pPS2/pPS2_scene/i/scene3/vehicles_sprite.jpg") 0 0 no-repeat;
+        border: 1px solid #1de0f7;
+        //box-shadow: 2px 2px 37px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    &__tech-play-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -15px;
+        margin-left: -18px;
+    }
+
+    &__tech-videoDesc {
+        border-bottom:1px dashed;
+        color:rgb(29, 225, 243);
+        font:18px/32px 'Geogrotesque',Tahoma,sans-serif;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        //.text-shadow(1px 1px 3px rgba(0, 0, 0, 0.9));
+    }
+    &__tech-video-link {
+        &:hover .pPS2_scene__tech-videoImage {
+            border-color: #aff3fb;
+            .animation(pPS2_scene__info-video-hover 0.8s steps(1, end) infinite);
+        }
+        &:hover .pPS2_scene__tech-videoDesc {
+            color: #aff3fb;
+        }
+    }
+
+    &__hover-tip {
+        &_object_magrider-tank {
+            left: 0px;
+            top: -97px;
+            width: 220px;
+        }
+        &_object_lighting-tank {
+            left: 80px;
+            top: -60px;
+            width: 190px;
+        }
+        &_object_sunderer-machine {
+            left: -30px;
+            top: -105px;
+            width: 250px;
+        }
+        &_object_vanguard-tank {
+            left: 21px;
+            top: -104px;
+            width: 250px;
+        }
+        &_object_flash-motorcicle {
+            left: -45px;
+            top: -100px;
+            width: 250px;
+        }
+        &_object_prowler-tank {
+            left: 560px;
+            top: 90px;
+            width: 190px;
+        }
+        &_object_galaxy-ship {
+            left: 0px;
+            top: 90px;
+            width: 190px;
+        }
+        &_object_liberator-ship {
+            left: 10px;
+            top: 290px;
+            width: 270px;
+        }
+        &_object_mosquito-ship {
+            left: 70px;
+            top: 80px;
+            width: 140px;
+        }
+        &_object_reaver-ship {
+            left: -40px;
+            top: 50px;
+            width: 190px;
+        }
+        &_object_scythe-ship {
+            left: 73px;
+            top: 262px;
+            width: 250px;
+        }
+        &_object_harasser-tank {
+            left: -32px;
+            top: 57px;
+            width: 250px;
+        }
+
+    }
+}

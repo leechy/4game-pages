@@ -1,0 +1,586 @@
+.pPS2_scene {
+
+    /* Объекты четвертой сцены */
+    &__planet-half {
+        width: 1968px;
+        height: 966px;
+        -webkit-transform-origin: 984px 1361px;
+        -ms-transform-origin: 984px 1361px;
+        -o-transform-origin: 984px 1361px;
+        transform-origin: 984px 1361px;
+
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/planet_half.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/planet_half.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/planet_half.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/planet_half.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 & {
+           .opacity(0);
+            .transforms(translate(-493px, 2500px));
+        }
+        .pPS2_scene_scene_4 & {
+            .opacity(1);
+            .transforms(translate(-493px, 335px));
+        }
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(-499px, -806px) scale(0.159) rotate(-70deg));
+            .transition(all @animationSpeed * 0.7 linear);
+            .transition-props(0.7);
+        }
+    }
+
+    &__vanu {
+        width: 480px;
+        height: 567px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/vanu.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/vanu.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/vanu.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/vanu.webp');
+        }
+        .transition(all @animationSpeedRaces linear);
+        .transforms(translate(-95px, 168px));
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_5 & {
+           .opacity(0);
+        }
+        .pPS2_scene_scene_4 & {
+            .opacity(1);
+            .transition(all @animationSpeedRaces @animationDelayRaces linear);
+        }
+
+        .pPS2_scene_internal_42 &,
+        .pPS2_scene_internal_43 & {
+            .opacity(0.1);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+
+        .pPS2_scene_scene_4 &_type_hover {
+            background: url('/b/pPS2/pPS2_scene/i/scene4/vanu-stroke.png') no-repeat !important;
+            .transforms(translate(-88px, 177px));
+        }
+    }
+
+    &__terran {
+        width: 937px;
+        height: 578px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/terran.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/terran.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/terran.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/terran.webp');
+        }
+        .transition(all @animationSpeedRaces linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 & {
+           .opacity(0);
+            .transforms(translate(60px, 22px));
+        }
+        .pPS2_scene_scene_4 & {
+            .opacity(1);
+            .transforms(translate(36px, 22px));
+            .transition(all @animationSpeedRaces @animationDelayRaces linear);
+        }
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(60px, 22px));
+        }
+
+        .pPS2_scene_internal_41 &,
+        .pPS2_scene_internal_43 & {
+            .opacity(0.1);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+
+        .pPS2_scene_scene_4 &_type_hover {
+            width: 932px;
+            height: 444px;
+            background: url('/b/pPS2/pPS2_scene/i/scene4/terran-stroke.png') no-repeat !important;
+            .transforms(translate(31px, 134px));
+        }
+    }
+
+    &__conglomerate {
+        width: 519px;
+        height: 729px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/conglomerate.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/conglomerate.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/conglomerate.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/conglomerate.webp');
+        }
+        .transition(all @animationSpeedRaces linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 & {
+           .opacity(0);
+            .transforms(translate(599px, 187px));
+        }
+        .pPS2_scene_scene_4 & {
+            .opacity(1);
+            .transforms(translate(539px, 187px));
+            .transition(all @animationSpeedRaces @animationDelayRaces linear);
+        }
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(599px, 187px));
+        }
+
+        .pPS2_scene_internal_41 &,
+        .pPS2_scene_internal_42 & {
+            .opacity(0.1);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+
+        .pPS2_scene_scene_4 &_type_hover {
+            width: 489px;
+            height: 441px;
+            background: url('/b/pPS2/pPS2_scene/i/scene4/conglomerate-stroke.png') no-repeat !important;
+            .transforms(translate(573px, 183px));
+        }
+    }
+
+    &__map {
+        width:812px;
+        height:453px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/map.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/map.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/map.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/map.webp');
+        }
+        .transforms(translate(105px, 576px));
+        .transition(all @animationSpeedInfo linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+        }
+        .pPS2_scene_scene_4 & {
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        .pPS2_scene_internal_41 &,
+        .pPS2_scene_internal_42 &,
+        .pPS2_scene_internal_43 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    &__pods {
+        width: 349px;
+        height: 313px;
+        background-repeat: no-repeat;
+        .svg & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/pods.png');
+        }
+        .jp2 & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/pods.jp2');
+        }
+        .jpx & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/pods.wdp');
+        }
+        .webp & {
+            background-image: url('/b/pPS2/pPS2_scene/i/scene4/pods.webp');
+        }
+        .transition(all @animationSpeed linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 & {
+            .transforms(translate(-2500px, -2500px) scale(7));
+        }
+        .pPS2_scene_scene_4 & {
+            .transforms(translate(60px, 395px) scale(1));
+            .transition(all @animationSpeed @animationSpeed * 0.2 ease-in);
+        }
+        .pPS2_scene_scene_5 & {
+            .transforms(translate(117px, 464px) scale(0.03) rotate(-50deg));
+            .transition(all @animationSpeed ease-in);
+        }
+
+        .pPS2_scene_internal_41 &,
+        .pPS2_scene_internal_42 &,
+        .pPS2_scene_internal_43 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    /* Инфо-слой четвертой сцены */
+    &__info-races-tabs {
+        width: 550px;
+        .transforms(translate(250px, 35px));
+        .transition(all @animationSpeedInfo linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_5 & {
+            z-index: 1;
+            .opacity(0);
+        }
+        .pPS2_scene_scene_4 & {
+            z-index: 7;
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        &-item {
+            display: inline-block;
+            width: 160px;
+            text-align: left;
+            vertical-align: top;
+            cursor: pointer;
+            color: #1de1f3;
+            &:hover {
+                color: #aff3fb;
+            }
+
+            &:hover .pPS2_scene__info-races-tabs-image {
+                background-position: 0 -50px;
+            }
+
+            &__state_active .pPS2_scene__info-races-tabs-image {
+                background-position: 0 0px;
+            }
+        }
+        &-image {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+
+            &_race-vanu {
+                background: url("/b/pPS2/pPS2_pages/i/interface/vanu.png") 0 -100px no-repeat;
+            }
+
+            &_race-terran {
+                background: url("/b/pPS2/pPS2_pages/i/interface/terran.png") 0 -100px no-repeat;
+            }
+
+            &_race-newcongl {
+                background: url("/b/pPS2/pPS2_pages/i/interface/conglomerate.png") 0 -100px no-repeat;
+            }
+        }
+        &-link {
+            display: inline-block;
+            vertical-align: middle;
+            width: 90px;
+        }
+        &-text {
+            font: 14px/18px 'Geogrotesque', Tahoma, sans-serif;
+            text-transform: uppercase;
+            text-decoration: underline;
+            .text-shadow(1px 1px 3px rgba(0, 0, 0, 0.9));
+        }
+    }
+
+    &__info4 {
+        .transition(all @animationSpeed ease-out);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 & {
+            .opacity(0);
+            .transforms(translate(308px, 800px) scale(3));
+        }
+        .pPS2_scene_scene_4 & {
+            .opacity(1);
+            .transforms(translate(308px, 304px));
+            .transition(all @animationSpeed ease-out);
+
+        }
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+            .transforms(translate(308px, 800px) scale(0.01));
+            .transition(all @animationSpeed * 0.5 ease-in);
+        }
+
+        .pPS2_scene_internal_41 &,
+        .pPS2_scene_internal_42 &,
+        .pPS2_scene_internal_43 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+
+        &-big {
+            margin: 0 0 10px;
+            font: bold 75px/53px 'Geogrotesque', Tahoma, sans-serif;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        &-small {
+            margin: 0;
+            font: bold 29px/38px 'Geogrotesque', Tahoma, sans-serif;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    &__info-video2 {
+        text-align: center;
+        .transforms(translate(392px, 455px));
+        .transition(all @animationSpeedInfo linear);
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 150%;
+            height: 190%;
+            top: -45%;
+            left: -25%;
+            margin: 0 0 0 -20px;
+            .textBackgroundBlue();
+        }
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_5 & {
+            z-index: 1;
+            .opacity(0);
+        }
+        .pPS2_scene_scene_4 & {
+            z-index: 3;
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        .pPS2_scene_internal_41 &,
+        .pPS2_scene_internal_42 &,
+        .pPS2_scene_internal_43 & {
+            z-index: 1;
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+
+        &-image {
+            position: relative;
+            z-index: 2;
+            width: 192px;
+            height: 100px;
+            margin: 0 auto;
+            background: url("/b/pPS2/pPS2_scene/i/scene4/empires_sprite.jpg") 0 0 no-repeat;
+            border: 1px solid #1de0f7;
+            //.box-shadow(2px, 2px, 37px, 0.5, 0, 0, 0, 12px);
+
+        }
+
+        &-play-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -18px;
+        }
+
+        &-link {
+            text-decoration: none;
+        }
+        &-title {
+            border-bottom: 1px dashed;
+            color: #1DE1F3;
+            font: 18px/32px 'Geogrotesque', Tahoma, sans-serif;
+            text-transform: uppercase;
+            //.text-shadow(1px 1px 3px rgba(0, 0, 0, 0.9));
+            position: relative;
+            z-index: 2;
+
+        }
+        &-link:hover .pPS2_scene__info-video2-image {
+            border-color: #aff3fb;
+            .animation(pPS2_scene__info-video-hover 0.6s steps(1, end) infinite);
+        }
+        &-link:hover .pPS2_scene__info-video2-title {
+            color: #aff3fb;
+        }
+    }
+
+    &__info-map-piece {
+        .transforms(translate(470px, 753px));
+        .transition(all @animationSpeedInfo linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+        }
+        .pPS2_scene_scene_4 & {
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        .pPS2_scene_internal_41 &,
+        .pPS2_scene_internal_42 &,
+        .pPS2_scene_internal_43 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    &__info-map-guide {
+        width: 1px;
+        height: 200px;
+        background: white;
+        .transforms(rotate(46deg) translate(846px, -5px));
+        .transition(all @animationSpeedInfo linear);
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_5 & {
+            .opacity(0);
+        }
+        .pPS2_scene_scene_4 & {
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        .pPS2_scene_internal_41 &,
+        .pPS2_scene_internal_42 &,
+        .pPS2_scene_internal_43 & {
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+    }
+
+    &__info-video3 {
+        width: 280px;
+        .transforms(translate(663px, 599px));
+        .transition(all @animationSpeedInfo linear);
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 150%;
+            height: 190%;
+            top: -45%;
+            left: -25%;
+            margin: 0 0 0 -20px;
+            .textBackgroundBlack();
+        }
+
+        .pPS2_scene_scene_1 &,
+        .pPS2_scene_scene_2 &,
+        .pPS2_scene_scene_3 &,
+        .pPS2_scene_scene_5 & {
+            z-index: 1;
+            .opacity(0);
+        }
+        .pPS2_scene_scene_4 & {
+            z-index: 3;
+            .opacity(1);
+            .transition(all @animationSpeedInfo @animationDelayInfo linear);
+        }
+
+        .pPS2_scene_internal_41 &,
+        .pPS2_scene_internal_42 &,
+        .pPS2_scene_internal_43 & {
+            z-index: 1;
+            .opacity(0);
+            .transition(opacity @animationSpeedInfo linear);
+        }
+
+        &-image {
+            position: relative;
+            z-index: 2;
+            width: 137px;
+            height: 70px;
+            background: url("/b/pPS2/pPS2_scene/i/scene4/facility_sprite.jpg") 0 0 no-repeat;
+            border: 1px solid #1de0f7;
+
+        }
+
+        &-link:hover &-image {
+            border-color: #aff3fb;
+            .animation(pPS2_scene__info-video-hover 0.8s steps(1, end) infinite);
+        }
+        &-link:hover &-title {
+            color: #aff3fb;
+        }
+
+        &-play-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -18px;
+        }
+
+        &-title {
+            border-bottom: 1px dashed;
+            color: #1DE1F3;
+            font: 18px/32px 'Geogrotesque', Tahoma, sans-serif;
+            text-transform: uppercase;
+            //.text-shadow(1px 1px 3px rgba(0, 0, 0, 0.9));
+            position: relative;
+            z-index: 2;
+        }
+        &-text {
+            margin: 10px 0 0;
+            color: white;
+            font: 14px/16px 'Geogrotesque', Tahoma, sans-serif;
+            text-transform: none;
+            //.text-shadow(1px 1px 3px rgba(0, 0, 0, 0.9));
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
